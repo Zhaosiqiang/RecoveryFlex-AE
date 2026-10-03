@@ -1,0 +1,1 @@
+The previous manuscript and figures were invalidated by the 2026-10-03 physics/data audit. The complete v0 copy is in ../audit/invalid_v0_20261003/paper/. Do not submit or cite it. A corrected manuscript will be generated after independent tests pass.

@@ -1,22 +1,7 @@
-# RecoveryFlex-AE
+# RecoveryFlex
 
-Research package for **From single-event headroom to repeatable services: AC-audited recovery envelopes for distributed batteries in active distribution feeders**.
+This repository contains the corrected v1 research package for the Applied Energy submission candidate “Auditable repeated-service contracts for distribution-connected batteries”. The former V0 pilot was independently invalidated and is preserved under `audit/invalid_v0_20261003/` for provenance only; its numerical claims are withdrawn.
 
-This is an independent project. It does not reuse the stopped-round topology-identification experiments in `NEXT_PAPER_TOPOSET_2026`. The core object is a network-coupled service--recovery contract: a battery service trajectory is accepted only when the service interval and the recovery interval jointly satisfy battery, three-phase AC voltage, line-thermal, and inverter constraints.
+The corrected pipeline uses an isolated OpenDSS constant-PQ adapter, a chronological Ausgrid interval profile bank, train/calibration/test offer selection, a full-rearm negative control, and a reserve-limited SOC sequence experiment. Reproduce the experiment with `python scripts/run_corrected_experiment.py`, regenerate figures with `python scripts/build_corrected_figures.py`, and run `pytest -q`.
 
-## Reproducibility status
-
-The repository now contains a reproducible working submission candidate: an IEEE 13-bus pilot, IEEE 123-bus four-event transfer audit, Ausgrid and OPSD profile processing, figures, tables and an Elsevier-style manuscript. All reported numbers are generated from `results/` by the scripts in this repository; no result from the earlier topology-identification project is copied into this paper.
-
-## Authors
-
-Siqiang Zhao (conceptualization, methodology, software, validation, formal analysis, investigation, data curation, visualization, original draft) and Fengxiang Zhang (supervision, review and editing).
-
-## License
-
-Code: MIT. Public input data retain their original licenses; provenance is recorded in `data_sources.md`.
-
-
-## Research object
-
-The method is expressed as a finite service--recovery viability composition. For a candidate service amplitude P, duration D, recovery deadline H, and event count M, the map `(service -> AC-constrained recovery)^M` is applied to SOC and feeder-margin states. The repeatable contract is the subset that remains viable after every re-arm. Telemetry is evaluated as a sensitivity axis that changes the candidate uncertainty margin; it is not the paper title or a communication-planning contribution.
+Authors: Siqiang Zhao and Fengxiang Zhang. Code license: MIT. Third-party sources retain their original licenses. The public repository and persistent archive identifiers are added only after they have been verified.

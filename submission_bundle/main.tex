@@ -1,96 +1,119 @@
-\documentclass[preprint,12pt]{elsarticle}
-\usepackage{amsmath,amssymb,booktabs,graphicx,threeparttable,siunitx,xcolor,hyperref,enumitem}
-\usepackage[margin=1in]{geometry}
-\journal{Applied Energy}
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,siunitx,enumitem,xcolor,hyperref}
+\usepackage{microtype}
+\graphicspath{{../figures/corrected_v1/}}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
-\newcommand{\kw}[1]{\SI{#1}{\kilo\watt}}
-\newcommand{\kwh}{\si{\kilo\watt\hour}}
+\title{Auditable repeated-service contracts for distribution-connected batteries: separating feeder limits from persistent recovery state}
+\author{Siqiang Zhao \and Fengxiang Zhang}
+\date{}
+
+\newcommand{\ac}{\mathrm{AC}}
+\newcommand{\soc}{\mathrm{SOC}}
+\newcommand{\pmax}{P^{\ast}}
+
 \begin{document}
-\begin{frontmatter}
-\title{From single-event headroom to repeatable services: AC-audited recovery envelopes for distributed batteries in active distribution feeders}
-\author[inst1]{Siqiang Zhao\corref{cor1}}
-\ead{siqiang.zhao@etu.toulouse-inp.fr}
-\author[inst2]{Fengxiang Zhang}
-\ead{2023112401@my.swjtu.edu.cn}
-\address[inst1]{Toulouse INP, Toulouse, France; Sichuan University, Chengdu, China}
-\address[inst2]{Southwest Jiaotong University, Chengdu, China}
-\cortext[cor1]{Corresponding author.}
+\maketitle
+
 \begin{abstract}
-A battery that can deliver one network service is not necessarily able to deliver the next one. The difference is hidden by one-shot flexibility calculations that enforce an instantaneous feeder limit or a copper-plate state-of-charge (SOC) balance but do not test the service--recovery--rearm sequence. This paper develops an auditable contract for repeated distributed-battery services. A candidate service amplitude, duration and recovery deadline is propagated through a finite viability composition: service delivery, nonlinear feeder-constrained recovery, and a terminal SOC test are repeated for multiple calls. The candidate is generated with a transparent reduced-order margin and every reported trajectory is replayed in an unbalanced OpenDSS feeder under held-out load/PV scenarios. We separate the battery-only recovery limit from the network recovery penalty and report a failure frontier over service duration, recovery deadline, event count and state-information quality. A first feasibility pilot uses 12 date-aware customer-days from the public Ausgrid half-hour solar-home data on the IEEE 13-node feeder, with two distributed battery placements and 576 two-event AC audits. Under a 10\% forecast-error stress, the mean accepted service power rises from \kw{51.6} with no state-information margin to \kw{68.2} with the full margin in this pilot. A 216-case IEEE 123-node transfer audit gave a second-to-first event contraction of 0.67 under stressed recovery paths, while an independent OPSD household check reproduced the information-sensitive ordering. The result is an empirical, scenario-audited contract rather than a universal guarantee.
+Repeated activation is increasingly used to turn distributed batteries into a flexibility product, yet a single-event operating envelope does not specify what can be delivered after the battery has been only partially re-armed. We formulate an auditable service--recovery contract that composes a persistent state-of-charge (SOC) map with a three-phase AC feeder replay. The contract reports the largest grid-valued export that satisfies terminal-power readback, all non-source phase-voltage limits, line and transformer loading limits, and an SOC reserve for $M$ repeated events. A full-rearm experiment is a pre-registered negative control: when the same measured feeder snapshot and SOC are restored, the admissible set must be invariant. A reserve-limited experiment then carries the SOC deficit between events, making sequence contraction identifiable. We evaluate the frozen contract on 214 training, 71 calibration, and 80 held-out customer-days from the public Ausgrid half-hour data, mapped to an IEEE 13-node OpenDSS snapshot. The selected single-event offer is \SI{140}{kW}; its held-out success rate is 96.25\%. The full-rearm control remains at a median \SI{140}{kW} through six events, whereas the reserve-limited capacity falls to \SI{90}{kW}, \SI{70}{kW}, \SI{50}{kW}, \SI{50}{kW}, and \SI{40}{kW} for two through six events. The negative control and command/readback audit separate a physical recovery-state effect from solver state, telemetry heuristics, or a changing scenario. The resulting workflow is a reproducible interface between flexibility bidding and feeder-level operational validation.
 \end{abstract}
-\begin{keyword}
-energy storage \sep distribution networks \sep flexibility services \sep state of charge \sep operating envelopes \sep OpenDSS \sep uncertainty
-\end{keyword}
-\end{frontmatter}
+
+\noindent\textbf{Keywords:} battery flexibility; repeated services; recovery contract; distribution feeder; AC power flow; state of charge; operating envelope
 
 \section{Introduction}
-Distribution batteries are increasingly used to provide voltage support, congestion relief, renewable-energy absorption and balancing services. The operational question for a distribution system operator (DSO) is therefore a contract question: what service can be promised at a bus, for how long, and with what time to re-arm the battery for the next call? A one-event power limit answers only the first part. A battery may have enough energy on a copper-plate calculation and still fail when its recovery charging creates a local voltage or thermal bottleneck. The failure can remain invisible until a second event is requested.
+Flexibility products are often described by the power that a resource can provide during one activation. For a battery, that description is incomplete: the activation changes the energy state, and a recovery period may be constrained by the same distribution feeder that constrained the service. A product that is feasible once can therefore be infeasible when it is called again. This distinction matters for distribution system operators, aggregators, and market designers because a dispatchable offer must be auditable over the sequence that the offer actually promises.
 
-Existing flexibility work covers several parts of this problem. Evans et al.~\cite{Evans2022Recovery} derive a detailed discharge--loss--recovery framework for aggregated storage, but the model is network-blind. Security regulating capability studies such as Xiao et al.~\cite{Xiao2025SRC} quantify an instantaneous or duration-dependent distribution-system limit, without a terminal SOC contract for repeated battery calls. Dynamic feasible-region aggregation~\cite{AE2026FOR} and multi-activation demand-response scheduling~\cite{AE2026DR} address time coupling, but do not provide the sequence-level, node- and phase-constrained recovery audit considered here. Risk-aware AC flexibility areas for EV pools~\cite{Giraldo2023RiskEV}, unobservable nodal ranges~\cite{Bolfek2022Unobservable}, and recent duration/dependability matrices~\cite{Energies2026Duration} further show why a static scalar capacity is insufficient. The gap is not SOC dynamics or operating envelopes in isolation. It is an auditable repeated-service contract whose recovery deadline is enforced together with internal feeder physics and whose failure frontier can be measured on hidden trajectories.
+Several streams of work provide important pieces of this problem. Recovery guarantees for aggregated storage have been formalized in state-space flexibility frameworks \cite{Evans2022Recovery}; security and duration criteria have been developed for distribution resources \cite{Xiao2025SRC}; dynamic feasible operation regions and operating envelopes have been used for coordinated dispatch \cite{Cheng2026FOR,Lankeshwara2025DOE}; and AC-aware flexibility areas have been estimated for charging pools \cite{Giraldo2023RiskEV}. Recovery-constrained flexibility bidding has also been studied in stochastic operation planning \cite{Wanapinit2022FlexBidding}, while communication-dependent planning reserves storage explicitly \cite{Wang2026Communication}. These contributions motivate a careful scope distinction: the object needed here is an operational contract whose repeated service and recovery trajectory is replayed through an unbalanced feeder and whose persistent SOC effect is identified by a negative control.
 
-This paper makes three contributions. First, it defines a finite service--recovery viability composition for a distributed battery fleet. The object is the largest service amplitude that survives $M$ calls, each followed by a network-constrained re-arm operation and terminal-SOC test. Second, it uses an explicit AC audit boundary: reduced-order candidates are accepted only after nonlinear OpenDSS replay of voltage, branch current, inverter and SOC constraints. Third, it reports a network recovery penalty and a state-information sensitivity curve rather than one headline flexibility number. The latter is an ablation axis, not a communication-planning claim: information quality changes the candidate margin, while the repeated recovery contract remains the primary object.
+This paper makes four contributions. First, we define a finite repeated-service contract that composes an SOC transition with a feeder feasibility audit. Second, we introduce an identifiability protocol: identical snapshots with full re-arm must give $C_M=1$, while a non-reset recovery state is the only changing state in the contraction experiment. Third, we implement a state-isolated OpenDSS adapter that measures the realized terminal power of a constant-PQ battery surrogate and reports every non-source phase voltage, line loading, and transformer loading. Fourth, we freeze the offer-selection rule before evaluating chronological held-out customer-days and release all generated tables and figures with the source code.
 
-\section{Sequence-level recovery contract}
-Let $p_{i,t}$ denote the active power of battery $i$, positive for grid export. For a service event of duration $D$ and recovery deadline $H$, the SOC update is
+\section{Contract definition}
+\subsection{Service--recovery state map}
+Let $s_k$ be the battery SOC immediately before service event $k$, $E$ the usable energy capacity, and $p_k$ positive for feeder export. For a time step $\Delta t$, the SOC update is
 \begin{equation}
- e_{i,t+1}=e_{i,t}+\eta_c p^c_{i,t}\Delta t-\frac{p^d_{i,t}\Delta t}{\eta_d},\qquad e_i^{\min}\leq e_{i,t}\leq e_i^{\max}.
+s_{k+1}=\begin{cases}
+s_k-\dfrac{p_k\Delta t}{\eta_d E}, & p_k\ge 0,\\[5pt]
+s_k+\dfrac{(-p_k)\Delta t\eta_c}{E}, & p_k<0,
+\end{cases}
+\label{eq:soc}
 \end{equation}
-A service contract requires a tracking band around the requested power during the delivery window and $e_{i,t+H}\ge e_{i,\mathrm{ref}}-\epsilon$ at the recovery deadline. At every interval, the three-phase feeder must satisfy the OpenDSS AC equations, bus-voltage bounds and branch-current limits.
+where $\eta_d$ and $\eta_c$ are discharge and charge efficiencies. A service event contains $N_s=4$ half-hour export intervals and $N_r=8$ half-hour recovery intervals. The battery starts at $s_0=0.80$ and must remain above $s_{\min}=0.20$.
 
-The reduced-order candidate is composed as a map $\mathcal{T}_{P,D,H}$ from a SOC/feeder-margin state to the next re-armed state. The finite repeatability set is
+For an event-level export command $P$, the full-rearm control uses a recovery power ratio
 \begin{equation}
- \mathcal{X}_{M}(P,D,H)=\left(\mathcal{T}_{P,D,H}\right)^M(\mathcal{X}_0)\cap\mathcal{X}_{\mathrm{safe}}.
+\rho_{\mathrm{rearm}}=\frac{N_s}{N_r\eta_d\eta_c}=0.5540,
 \end{equation}
-The reported capacity $P_M^*$ is the largest grid value for which the sampled state trajectory remains in this set and passes the nonlinear AC audit. The sequence contraction and network recovery penalty are
+which returns the SOC to its initial value when the AC audit accepts every recovery interval. The persistent-state experiment uses a fixed recovery ratio $\rho_{\mathrm{lim}}=0.30$. Its SOC deficit is passed to the next event. This is a deliberately simple contract state: it exposes whether a repeated offer is backed by a real recovery margin without adding a hidden degradation or temperature model.
+
+\subsection{AC-audited admissible set}
+At every service and recovery interval, the command is applied to an isolated OpenDSS context through a single-phase constant-PQ load surrogate. The sign is reversed internally because a positive load consumes power while a positive contract command exports power. The adapter reads the terminal complex power from the circuit element after the nonlinear solve. A command is accepted only if the readback agrees within 1\% (with a \SI{0.01}{kW} absolute floor), the solve converges, all non-source phase voltages lie in [0.95,1.05] pu, and every line and transformer loading ratio is at most 1.0. No zero-voltage phase is silently discarded.
+
+For a profile trajectory $\omega$ and sequence length $M$, the auditable capacity is
 \begin{equation}
- C_M=\frac{P_M^*}{P_{M-1}^*},\qquad \mathrm{NRP}_M=1-\frac{P_{M,\mathrm{AC}}^*}{P_{M,\mathrm{SOC}}^*}.
+\pmax_M(\omega)=\max\{P\in\mathcal{G}: \text{AC}(P,\omega,k)=1,\ s_{k,j}\ge s_{\min}\ \forall k\le M\},
+\label{eq:capacity}
 \end{equation}
-Neither quantity is treated as a universal theorem; they are empirical values with scenario definitions and confidence intervals recorded in the replication package.
+where $\mathcal{G}=\{0,10,\ldots,300\}$ kW and $j$ indexes the service and recovery intervals. We report the contraction ratio $C_M=\pmax_M/\pmax_1$. Under an unchanged deterministic snapshot and full re-arm, Eq.~\eqref{eq:capacity} is invariant by construction. This is a required negative control rather than a result that is assumed after the fact.
 
-\section{Experimental protocol}
-\subsection{Feeder and measured profiles}
-The pilot uses the public IEEE 13-node unbalanced feeder distributed with the OpenDSS mirror. The input files are copied into the project with their SHA-256 recorded in the data manifest. Ausgrid's public Solar Home Electricity Data contains 300 solar customers with half-hourly general consumption and gross generation. We retain paired customer-days, split by date and season, and select four joint load/PV quantile representatives per season. The mapping from customer-day profiles to feeder load multipliers and PV fractions is explicitly synthetic because the meter data do not include feeder topology. The independent Open Power System Data household file is processed with the same date-aware pipeline; its six representative days are used only as an external profile check in the current release.
+\section{Data and experimental design}
+\subsection{Interval-resolved profiles}
+The main evaluation uses the public Ausgrid solar-home data \cite{Ausgrid2011}. GC and CL channels are combined as load and GG is used as PV. The source values are energy per half-hour and are converted to average kW by dividing by 0.5 h. Ten customer groups are created once with a fixed seed; each group retains a 48-point day trajectory. Dates are split chronologically within each month before any outcome is calculated: 214 training days, 71 calibration days, and 80 test days. A separate loader also corrects the cumulative-energy convention in the OPSD household release \cite{OPSD2020}; those profiles are retained as an external data audit rather than mixed into the main offer selection.
 
-\subsection{Scenarios and baselines}
-The pilot evaluates two battery placements (634.1 and 645.2), a \SI{150}{\kilo\watt}/\SI{300}{\kilo\watt\hour} battery, two service durations ($D\in\{0.25,1\}$ h), two recovery windows ($H\in\{1,4\}$ h), three state-information margins, and two forecast-error levels (0 and 10\%). A two-event sequence is replayed at 15-minute resolution. The transfer audit adds $M\in\{1,2,3,4\}$ on an IEEE 123-node QSTS feeder; the independent household dataset is used as a held-out profile check.
+The measured profiles are mapped to the feeder through a fixed stress embedding. Train-only maxima define $l_{\mathrm{norm}}$ and $g_{\mathrm{norm}}$; the factors used in every split are
+\begin{equation}
+l=\operatorname{clip}(0.40+0.30l_{\mathrm{norm}},0.35,0.85),\qquad
+g=\operatorname{clip}(0.10+0.60g_{\mathrm{norm}},0,1).
+\end{equation}
+The mapping makes the profile shape and chronological split auditable without claiming that a household load is numerically equal to the IEEE feeder load.
 
-The planned comparison is: (B0) instantaneous network headroom with no SOC recovery; (B1) copper-plate aggregate recovery; (B2) a deterministic multi-period model with a terminal SOC constraint but no hidden-scenario margin; (B3) delivery-only network feasibility; (B4) the proposed sequence-level contract; and (B5) a small full-information AC oracle. All methods use the same battery ratings, placements, event windows and hidden AC replay.
+\subsection{Feeder and offer selection}
+The network is the public IEEE 13-node snapshot \cite{OpenDSS13}. A battery is placed at the valid phase-specific site 611.3 and a 300 kW fixed-P PV surrogate at 675.1. The OpenDSS context is rebuilt before every candidate event so that a failed high-power solve cannot contaminate a later candidate. Candidate offers are evaluated over the two fixed daily service starts (intervals 8 and 32). The largest grid offer with at least 95\% successful events on the training dates is selected. Calibration dates choose the largest predeclared multiplier from {0.80, 0.90, 1.00} that retains the 95\% threshold. Test dates are then read with all parameters frozen.
 
-\section{Pilot results}
-Figure~\ref{fig:workflow} shows the audit workflow. The pilot generated 576 two-event candidate trajectories; 432 passed the current AC/SOC audit. Under 10\% forecast-error stress, the mean accepted service power was \kw{51.6}, \kw{60.0}, and \kw{68.2} for the three information margins (0, 50 and 100\% proxy coverage), respectively. The corresponding accepted rates were 0.50 because the stress set includes deliberately infeasible high-load/long-duration combinations. With zero forecast error, all margins returned the same battery-limited mean of \kw{144.9}, a negative control. The 123-node event-tree transfer audit produced 216 additional trajectories; under its stressed re-arm path, $C_2=0.67$ and $C_3=C_4=1$ for all tested recovery windows, with the mean single-event capacity increasing from \kw{125} at a 1-h deadline to \kw{150} at 2--4 h. Table~\ref{tab:baseline} separates the SOC-only upper bound from the AC-audited sequence result: after the second call, the network recovery penalty is 0.384 at a 1-h deadline and 0.333 at 2--4 h in this event-tree stress test.
+\section{Results}
+\subsection{Offer selection and held-out audit}
+The frozen offer is \SI{140}{kW}. The success rates are 98.13\% on training events, 97.18\% on calibration events, and 96.25\% on the 160 held-out events (80 dates and two starts per date). The maximum held-out phase voltage is 1.0506 pu; the few failed events are retained in the audit rather than removed. The corresponding voltage and success scatter is shown in Fig.~\ref{fig:audit}. A direct command/readback test at -70, 0, 70, and \SI{140}{kW} gives terminal powers within \SI{0.005}{kW} of the command (Fig.~\ref{fig:readback}).
 
-The heatmap in Fig.~\ref{fig:heatmap} shows the expected duration/deadline trend: a longer recovery window only helps when the service event is energy-limited; at stressed network points the AC replay remains the active bottleneck. The placement box plot (Fig.~\ref{fig:placement}) is a pilot diagnostic rather than a general feeder conclusion. The independent OPSD check gave \kw{148.2} at zero forecast error for both information margins and \kw{103.2} versus \kw{137.0} at 10\% error for no versus full margin, preserving the expected ordering; all 48 OPSD replay rows passed (Wilson 95\% interval 0.926--1.000). Figure~\ref{fig:trace} shows why two-event accounting matters: the second service is admitted only after the first service has returned the state to the terminal target.
-
-
-\begin{table}[t]
+\begin{figure}[t]
 \centering
-\caption{Copper-plate SOC upper bound and AC-audited event-tree capacity (mean across paths and placements).}\label{tab:baseline}
-\begin{tabular}{rrrrr}
-\toprule
-$H$ (h) & $M$ & $P_{M,\mathrm{SOC}}$ (kW) & $P_{M,\mathrm{AC}}$ (kW) & $C_M$ \\
-\midrule
-1 & 1 & 135.4 & 125.0 & -- \\
-1 & 2 & 135.4 & 83.3 & 0.667 \\
-2 & 1 & 150.0 & 150.0 & -- \\
-2 & 2 & 150.0 & 100.0 & 0.667 \\
-4 & 1 & 150.0 & 150.0 & -- \\
-4 & 2 & 150.0 & 100.0 & 0.667 \\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=0.98\linewidth]{fig3_heldout_ac_audit}
+\caption{Frozen-offer success rates and held-out voltage audit. The dashed line in the left panel is the predeclared 95\% threshold; the right panel retains both accepted and rejected test events.}
+\label{fig:audit}
+\end{figure}
 
-\begin{figure}[t]\centering\includegraphics[width=0.98\linewidth]{figures/fig1_contract_workflow.pdf}\caption{Sequence-level service--recovery contract and nonlinear AC audit. Hidden load/PV scenarios are used for held-out replay; state-information quality changes the candidate margin.}\label{fig:workflow}\end{figure}
-\begin{figure}[t]\centering\includegraphics[width=0.72\linewidth]{figures/fig2_duration_recovery_heatmap.pdf}\caption{Pilot mean accepted service power versus service duration and recovery deadline at full information and 10\% forecast error.}\label{fig:heatmap}\end{figure}
-\begin{figure}[t]\centering\includegraphics[width=0.72\linewidth]{figures/fig3_telemetry_value.pdf}\caption{Information-quality sensitivity under 10\% forecast error.}\label{fig:telemetry}\end{figure}
-\begin{figure}[t]\centering\includegraphics[width=0.72\linewidth]{figures/fig4_placement_dependence.pdf}\caption{Battery placement sensitivity in the pilot.}\label{fig:placement}\end{figure}
-\begin{figure}[t]\centering\includegraphics[width=0.92\linewidth]{figures/fig5_repeated_service_trace.pdf}\caption{Illustrative two-event trajectory: each service is followed by recovery before the next call.}\label{fig:trace}\end{figure}
-\begin{figure}[t]\centering\includegraphics[width=0.78\linewidth]{figures/fig6_event_tree_contraction.pdf}\caption{Event-tree transfer audit on IEEE 123 nodes. The stressed second re-arm path contracts accepted capacity after the first call.}\label{fig:eventtree}\end{figure}
+\subsection{Sequence contraction and negative control}
+The full-rearm control repeats an identical held-out profile and restores the SOC after each event. Its two-event contraction ratio is $C_2=1.0$. Across the 80 test days, the full-rearm capacity has a median of \SI{140}{kW} for every $M=1,\ldots,6$ (test-day range 130--140 kW). In contrast, the reserve-limited capacity has medians of \SI{140}{kW}, \SI{90}{kW}, \SI{70}{kW}, \SI{50}{kW}, \SI{50}{kW}, and \SI{40}{kW} for $M=1$ through 6, respectively. Thus $C_2=0.643$ and $C_6=0.286$ relative to the reserve-limited single-event capacity. The state trajectory in Fig.~\ref{fig:soc} shows why the contraction is identifiable: the full-rearm state returns to 0.80, whereas the limited recovery leaves a persistent deficit that reaches the reserve boundary.
 
-\section{Discussion and study gate}
-The package passes the feasibility gates at the reported scale: the 13-node audit is reproducible, the 123-node event-tree transfer includes four calls and shows a measurable second-call contraction against the copper-plate upper bound, and the OPSD profile check preserves the information ordering. The final evidence is finite-scenario and does not claim universal safety; broader feeder and customer coverage is a natural extension. We report Wilson intervals and separate the battery-only recovery penalty from the network-induced penalty. Economic quantities are limited to operational energy, curtailment and throughput proxies; no payment or lifecycle cost-recovery claim is needed for the central contribution.
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.73\linewidth]{fig2_sequence_capacity}
+\caption{Sequence capacity on held-out profiles. The blue curve is the full-rearm negative control; the red curve carries the reserve-limited SOC state. Shading shows the test-day minimum and maximum.}
+\label{fig:sequence}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.82\linewidth]{fig4_soc_state_trace}
+\caption{SOC state for a \SI{140}{kW} repeated event. Full re-arm returns to the initial state after each recovery; the reserve-limited contract carries the deficit forward.}
+\label{fig:soc}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.76\linewidth]{fig6_command_readback}
+\caption{Measured terminal power versus commanded battery power at the held-out operating point. Positive values export to the feeder.}
+\label{fig:readback}
+\end{figure}
+
+\section{Discussion}
+The results answer a narrow operational question. A one-event offer can be valid on more than 96\% of unseen profile events, yet that statistic alone does not describe repeated delivery. When the recovery contract restores the state, the repeated capacity is invariant up to the 10 kW grid and the small AC variation across test days. When recovery is intentionally limited and the state is carried forward, the sequence capacity contracts predictably. The negative control prevents attributing the contraction to an unobserved change in the feeder scenario.
+
+The contribution is complementary to dynamic operating envelopes, risk-aware AC flexibility areas, recovery-aware bidding, and duration assessment. Those methods can supply a richer uncertainty model or a market objective; the interface developed here supplies a sequence-level acceptance test that can be applied after such a model proposes an offer. Communication or telemetry effects are deliberately excluded from the headline result because a deterministic derating formula would confound information value with a preselected penalty.
+
+There are three limits. The IEEE 13-node feeder is a public validation network rather than a utility feeder, and the profile-to-feeder mapping is a declared stress embedding. The battery state contains SOC but no temperature, degradation, or converter fault state. Finally, the 10 kW grid and fixed recovery ratio quantify one contract design; they do not establish a universal tariff. These limits define straightforward extensions: multi-phase inverter models, stochastic measurement uncertainty, learned recovery policies, and field feeder telemetry can all be inserted without changing the identifiability protocol.
 
 \section{Conclusions}
-A repeatable battery service should be specified by a service window, recovery deadline and event count, not by one instantaneous MW value. The project implements that contract as a viability composition and verifies candidate trajectories with nonlinear unbalanced AC replay. The pilot, transfer and held-out profile audits show a measurable information-sensitive frontier and a second-call contraction. The resulting package is a finite-scenario empirical study that can be submitted with its code, data manifests and AC-audit traces.
+We developed and audited a repeated-service contract that joins persistent SOC recovery with three-phase feeder feasibility. The physically isolated adapter, chronological public-profile split, and full-rearm negative control make the sequence effect testable. In the corrected experiment, a frozen \SI{140}{kW} offer achieved 96.25\% held-out event success; its capacity stayed at \SI{140}{kW} under full re-arm but fell to \SI{40}{kW} by the sixth reserve-limited event. The result supports a practical rule for flexibility products: the offered power should be accompanied by an explicit recovery state and an auditable sequence horizon.
 
 \section*{CRediT authorship contribution statement}
 Siqiang Zhao: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Visualization, Writing -- original draft. Fengxiang Zhang: Supervision, Writing -- review and editing.
@@ -99,14 +122,14 @@ Siqiang Zhao: Conceptualization, Methodology, Software, Validation, Formal analy
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 \section*{Funding}
-No specific grant from funding agencies in the public, commercial, or not-for-profit sectors supported this work.
-
-\section*{Acknowledgements}
-No additional acknowledgements.
+No dedicated external funding was received for this work.
 
 \section*{Declaration of generative AI and AI-assisted technologies in the writing process}
-During preparation of this manuscript, the authors used OpenAI Codex/ChatGPT and Manus to assist with literature organization, code drafting and language editing. The authors reviewed and edited the content and take full responsibility for the final manuscript.
+During preparation of this manuscript, the authors used OpenAI Codex/ChatGPT and Manus to assist with code organization, literature checking, and language editing. The authors reviewed and verified all content, analyses, and conclusions and remain fully responsible for the work.
 
-\bibliographystyle{elsarticle-num}
+\section*{Data and code availability}
+The corrected scripts, manifests, figures, and tests are supplied with the submission package. The code is released under the MIT License. A public repository and persistent archive link will be inserted in this section before submission; the current local package intentionally contains no fabricated DOI or URL.
+
+\bibliographystyle{unsrt}
 \bibliography{references}
 \end{document}

@@ -1,7 +1,7 @@
 Highlights
 
-- Repeated battery calls are contracted with explicit recovery deadlines.
-- A service--recovery viability composition tracks cross-event SOC feasibility.
-- Nonlinear OpenDSS replay separates device and network recovery penalties.
-- Held-out load/PV scenarios expose a duration--deadline failure frontier.
-- State information is evaluated by its effect on deliverable flexibility.
+• A repeated-service contract composes SOC recovery with an unbalanced feeder AC audit.
+• A full-rearm negative control makes sequence contraction identifiable.
+• A frozen 140 kW offer achieves 96.25% success on 80 held-out customer-days.
+• Reserve-limited capacity falls from 140 kW to 40 kW by the sixth event.
+• Scripts, manifests, tests, and publication figures are supplied under MIT terms.

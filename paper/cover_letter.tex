@@ -1,14 +1,26 @@
-\documentclass[11pt]{letter}
-\usepackage[margin=1in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{hyperref}
+\usepackage{siunitx}
 \begin{document}
-\begin{letter}{Editor-in-Chief\\Applied Energy}
-\opening{Dear Editor,}
-We submit the manuscript ``From single-event headroom to repeatable services: AC-audited recovery envelopes for distributed batteries in active distribution feeders'' for consideration as a Full Length Research Article in Applied Energy.
+\sloppy
 
-The manuscript addresses a practical gap in distribution-system flexibility: a battery may pass a one-event power test yet fail the next call because recharge is constrained by feeder voltage and branch currents. We formulate a deadline-aware service--recovery contract, compose it over repeated calls, and audit candidate contracts with nonlinear OpenDSS power flow on held-out load/PV trajectories. The paper reports deliverable power, recovery success, sequence contraction and the network recovery penalty, with state-information sensitivity as an operating ablation.
+\noindent Dear Editor,
 
-The work is original, is not under consideration elsewhere, and has been approved by both authors. The authors declare no competing interests and no specific grant funding. An AI-use declaration is included in the manuscript. Code will be released under the MIT license at the public repository URL added before submission.
+\medskip
 
-\closing{Sincerely,\\Siqiang Zhao\\Corresponding author}
-\end{letter}
+We submit the manuscript ``Auditable repeated-service contracts for distribution-connected batteries: separating feeder limits from persistent recovery state'' for consideration in \emph{Applied Energy}.
+
+The manuscript addresses a practical gap in flexibility assessment: a battery offer that is feasible for one activation is not necessarily feasible after a partially completed recovery. We define a sequence-level service--recovery contract and audit every interval through an isolated three-phase OpenDSS snapshot. The experiment includes a pre-registered full-rearm negative control. This control is essential because it distinguishes a genuine persistent SOC effect from a changing feeder scenario or a solver-state artifact. On 214 training, 71 calibration, and 80 held-out Ausgrid customer-days, a frozen \SI{140}{kW} offer reaches 96.25\% held-out event success. The full-rearm capacity remains at \SI{140}{kW} through six events, while the reserve-limited contract falls to \SI{40}{kW} by the sixth event.
+
+The work is aligned with the journal's interest in energy-system flexibility, distributed storage, and distribution-network operation. It complements operating-envelope, recovery-aware bidding, and AC flexibility studies by providing a reproducible acceptance interface for repeated services. The package contains the corrected OpenDSS adapter, data manifests, chronological split, experiment scripts, tests, generated figures, and the manuscript source.
+
+This manuscript is original, is not under consideration elsewhere, and has been approved by both authors. Siqiang Zhao led conceptualization, methodology, software, validation, analysis, investigation, data curation, visualization, and the original draft. Fengxiang Zhang supervised the study and reviewed and edited the manuscript. The authors declare no competing interests and received no dedicated external funding. OpenAI Codex/ChatGPT and Manus were used for code organization, literature checking, and language editing; the authors verified all content and remain responsible for the work.
+
+\medskip
+
+Sincerely,\\
+Siqiang Zhao\\
+Fengxiang Zhang
+
 \end{document}

@@ -1,0 +1,5 @@
+Status: corrected v1 submission candidate.
+
+The corrected full run uses 214/71/80 chronological train/calibration/test dates, selects a 140 kW offer, and reports 96.25% held-out event success. Full-rearm C2=1.0; reserve-limited non-reset C2=0.5. Fourteen automated tests pass and the manuscript/figure/cover-letter bundle compiles.
+
+The former V0 pilot remains archived under audit/invalid_v0_20261003/ and must not be cited. Before final Editorial Manager upload, insert the verified public repository URL/DOI and the authors' affiliation and corresponding-author fields.

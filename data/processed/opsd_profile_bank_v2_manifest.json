@@ -1,0 +1,18 @@
+{
+  "source_file": "/Users/skzhao/Library/Mobile Documents/com~apple~CloudDocs/Toulouse/Codex-\u79d1\u7814\u94fa\u8def/RecoveryFlex_AE_2026/data/raw/opsd_household_15min.csv",
+  "source_sha256": "eca7dee5ac6e53373cd0209bc05ba3383cd860bfa5d5e995f74fa78db8857c58",
+  "n_days": 660,
+  "intervals_per_day": 96,
+  "units": "average kW; cumulative kWh first-differenced over 15 minutes",
+  "channels": {
+    "load": "DE_KN_residential1_grid_import",
+    "pv": "DE_KN_residential1_pv"
+  },
+  "interpolation_flag": "only the selected channel name in the semicolon-separated marker is counted",
+  "split_rule": "within each month: earliest 60% train, next 20% cal, latest 20% test",
+  "split_counts": {
+    "train": 387,
+    "cal": 128,
+    "test": 145
+  }
+}

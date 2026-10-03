@@ -1,3 +1,13 @@
-# Applied Energy submission bundle (working)
+# Applied Energy submission package
 
-The editable manuscript is in `paper/main.tex`. The current PDF includes the 13-node pilot, IEEE 123-node four-event transfer audit and OPSD profile check. It is the working submission candidate; any later robustness runs should regenerate the same files. `paper/Highlights.txt`, `paper/cover_letter.tex`, and `AUTHOR_AND_SUBMISSION_CHECKLIST.md` are prepared for the Editorial Manager upload. The repository URL remains a deliberate placeholder until the authors provide an account/URL or complete the public repository handoff.
+This package is generated from the corrected v1 experiment. The prior V0 pilot is invalid and is preserved only under `audit/invalid_v0_20261003/`; none of its figures, tables, or numerical claims are included here.
+
+Contents:
+
+- `main.tex`, `references.bib`, `Highlights.txt`, and `cover_letter.pdf`;
+- the six corrected publication figures;
+- `results/corrected_v1/` with the frozen summary, event-level audit, sequence capacities, and command/readback audit;
+- `scripts/`, `src/`, `tests/`, and data manifests needed to reproduce the analysis;
+- `AUTHOR_AND_SUBMISSION_CHECKLIST.md` for the Editorial Manager upload fields.
+
+The code is released under the MIT License. The public repository URL and persistent archive identifier will be inserted after the repository is created and checked; no placeholder DOI is used.
