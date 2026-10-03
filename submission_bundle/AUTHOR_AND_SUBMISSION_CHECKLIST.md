@@ -11,6 +11,6 @@
 - AI declaration: OpenAI Codex/ChatGPT and Manus assisted with code organization, literature checking, and language editing; authors verified the work.
 - Code license: MIT.
 - Data: Ausgrid public data and corrected OPSD audit manifest; raw archives are not redistributed.
-- Repository URL/DOI: insert only after public repository creation and persistent archive registration.
+- Repository URL: https://github.com/Zhaosiqiang/RecoveryFlex-AE. Persistent DOI archive is optional and may be added after editorial review.
 - Upload manuscript PDF, source ZIP, highlights, cover letter, individual figure files, and supplementary audit tables.
 - Complete the journal's declarations and data/code availability fields in Editorial Manager.

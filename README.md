@@ -4,4 +4,4 @@ This repository contains the corrected v1 research package for the Applied Energ
 
 The corrected pipeline uses an isolated OpenDSS constant-PQ adapter, a chronological Ausgrid interval profile bank, train/calibration/test offer selection, a full-rearm negative control, and a reserve-limited SOC sequence experiment. Reproduce the experiment with `python scripts/run_corrected_experiment.py`, regenerate figures with `python scripts/build_corrected_figures.py`, and run `pytest -q`.
 
-Authors: Siqiang Zhao and Fengxiang Zhang. Code license: MIT. Third-party sources retain their original licenses. The public repository and persistent archive identifiers are added only after they have been verified.
+Authors: Siqiang Zhao and Fengxiang Zhang. Code license: MIT. Third-party sources retain their original licenses. Public repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE.

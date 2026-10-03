@@ -10,4 +10,4 @@ Contents:
 - `scripts/`, `src/`, `tests/`, and data manifests needed to reproduce the analysis;
 - `AUTHOR_AND_SUBMISSION_CHECKLIST.md` for the Editorial Manager upload fields.
 
-The code is released under the MIT License. The public repository URL and persistent archive identifier will be inserted after the repository is created and checked; no placeholder DOI is used.
+The code is released under the MIT License. Public repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE. A persistent DOI archive can be added after editorial review.
