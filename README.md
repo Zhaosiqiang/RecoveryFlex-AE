@@ -6,7 +6,7 @@ This is an independent project. It does not reuse the stopped-round topology-ide
 
 ## Reproducibility status
 
-The repository is being built in stages. The first milestone is a small IEEE 13-bus end-to-end pilot, followed by public smart-meter/PV profiles, IEEE 13/123-bus experiments, figure regeneration, and the Applied Energy submission bundle. All numbers in the manuscript will be generated from `results/` by the scripts in this repository; no result from the abandoned stopped-round project is copied into this paper.
+The repository now contains a reproducible working submission candidate: an IEEE 13-bus pilot, IEEE 123-bus four-event transfer audit, Ausgrid and OPSD profile processing, figures, tables and an Elsevier-style manuscript. All reported numbers are generated from `results/` by the scripts in this repository; no result from the earlier topology-identification project is copied into this paper.
 
 ## Authors
 
