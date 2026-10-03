@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+paper/main.pdf
+paper/page_checks/
+paper/figures/
+paper/fig*.pdf
+# Third-party raw archives and large source tables stay out of Git; manifests record hashes/URLs.
+data/raw/*.zip
+data/raw/*.csv
+data/raw/ausgrid/*.csv
+data/raw/ieee123_qsts/profiles/
+data/raw/profiles/
