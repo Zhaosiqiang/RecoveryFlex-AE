@@ -1,0 +1,1162 @@
+{
+  "audit_date": "2026-10-03",
+  "sources": [
+    {
+      "doi": "10.1109/TSG.2022.3173900",
+      "crossref_url": "https://api.crossref.org/works/10.1109%2FTSG.2022.3173900",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1109/tsg.2022.3173900",
+        "title": [
+          "Flexibility Framework With Recovery Guarantees for Aggregated Energy Storage Devices"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2534-485X",
+            "authenticated-orcid": false,
+            "given": "Michael P.",
+            "family": "Evans",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Electronic Engineering, Imperial College London, London, U.K."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8369-7568",
+            "authenticated-orcid": false,
+            "given": "Simon H.",
+            "family": "Tindemans",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Data-Centric Engineering Programme, Alan Turing Institute, London, U.K"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5311-4306",
+            "authenticated-orcid": false,
+            "given": "David",
+            "family": "Angeli",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical and Electronic Engineering, Imperial College London, London, U.K."
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "IEEE Transactions on Smart Grid"
+        ],
+        "volume": "13",
+        "issue": "5",
+        "page": "3519-3531",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              9
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              10
+            ]
+          ],
+          "date-time": "2022-05-10T19:40:20Z",
+          "timestamp": 1652211620000
+        },
+        "URL": "https://doi.org/10.1109/tsg.2022.3173900",
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/5165411/9865089/09772074.pdf?arnumber=9772074",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.1016/j.apenergy.2024.125253",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2024.125253",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.apenergy.2024.125253",
+        "title": [
+          "Flexible resource security regulating capability for distribution systems: Concept, method, and applications"
+        ],
+        "author": [
+          {
+            "given": "Jun",
+            "family": "Xiao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chengjin",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Guowei",
+            "family": "He",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zihan",
+            "family": "Lv",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gang",
+            "family": "Sun",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yupeng",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Haishen",
+            "family": "Liang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Applied Energy"
+        ],
+        "volume": "382",
+        "issue": null,
+        "page": "125253",
+        "article-number": "125253",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              9
+            ]
+          ],
+          "date-time": "2025-01-09T13:39:10Z",
+          "timestamp": 1736429950000
+        },
+        "URL": "https://doi.org/10.1016/j.apenergy.2024.125253",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261924026370?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261924026370?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.1016/j.apenergy.2026.128444",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2026.128444",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.apenergy.2026.128444",
+        "title": [
+          "Coordinated optimal dispatch of storage-like resources based on dynamic feasible operation region aggregation"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3687-6912",
+            "authenticated-orcid": false,
+            "given": "Tong",
+            "family": "Cheng",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3273-8881",
+            "authenticated-orcid": false,
+            "given": "Jing",
+            "family": "Dai",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dawei",
+            "family": "Qiu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zifen",
+            "family": "Han",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "He",
+            "family": "Sheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9545-6243",
+            "authenticated-orcid": false,
+            "given": "Haiwang",
+            "family": "Zhong",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7421-3947",
+            "authenticated-orcid": false,
+            "given": "Goran",
+            "family": "Strbac",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Qing",
+            "family": "Xia",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Chongqing",
+            "family": "Kang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Applied Energy"
+        ],
+        "volume": "424",
+        "issue": null,
+        "page": "128444",
+        "article-number": "128444",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              12
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              12
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              20
+            ]
+          ],
+          "date-time": "2026-07-20T06:27:00Z",
+          "timestamp": 1784528820000
+        },
+        "URL": "https://doi.org/10.1016/j.apenergy.2026.128444",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261926010986?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261926010986?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.1016/j.apenergy.2026.127562",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2026.127562",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.apenergy.2026.127562",
+        "title": [
+          "Optimal day-ahead scheduling for explicit demand response provision of a renewable energy hub with hot water preparation"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0009-8817-100X",
+            "authenticated-orcid": false,
+            "given": "Antonio",
+            "family": "Karneluti",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0000-6651-9911",
+            "authenticated-orcid": false,
+            "given": "Petar",
+            "family": "Lovrić",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3876-6787",
+            "authenticated-orcid": false,
+            "given": "Mario",
+            "family": "Vašak",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Applied Energy"
+        ],
+        "volume": "410",
+        "issue": null,
+        "page": "127562",
+        "article-number": "127562",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              5
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              20
+            ]
+          ],
+          "date-time": "2026-02-20T11:28:20Z",
+          "timestamp": 1771586900000
+        },
+        "URL": "https://doi.org/10.1016/j.apenergy.2026.127562",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S030626192600214X?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S030626192600214X?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.35833/MPCE.2022.000452",
+      "crossref_url": "https://api.crossref.org/works/10.35833%2FMPCE.2022.000452",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.35833/mpce.2022.000452",
+        "title": [
+          "Estimating Risk-aware Flexibility Areas for Electric Vehicle Charging Pools via AC Stochastic Optimal Power Flow"
+        ],
+        "author": [
+          {
+            "given": "Juan",
+            "family": "S. Giraldo",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nataly",
+            "family": "Banol Arias",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pedro",
+            "family": "P. Vergara",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Maria",
+            "family": "Vlasiou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gerwin",
+            "family": "Hoogsteen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Johann",
+            "family": "L. Hurink",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of Modern Power Systems and Clean Energy"
+        ],
+        "volume": "11",
+        "issue": "4",
+        "page": "1247-1256",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2023-07-26T02:21:40Z",
+          "timestamp": 1690338100000
+        },
+        "URL": "https://doi.org/10.35833/mpce.2022.000452",
+        "link": null,
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.1016/j.epsr.2022.108262",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.epsr.2022.108262",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.epsr.2022.108262",
+        "title": [
+          "A practical approach to flexibility provision assessment in an unobservable distribution network"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7634-848X",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Bolfek",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tomislav",
+            "family": "Capuder",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Electric Power Systems Research"
+        ],
+        "volume": "212",
+        "issue": null,
+        "page": "108262",
+        "article-number": "108262",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              11
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              11
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              19
+            ]
+          ],
+          "date-time": "2022-07-19T14:51:37Z",
+          "timestamp": 1658242297000
+        },
+        "URL": "https://doi.org/10.1016/j.epsr.2022.108262",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0378779622004631?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0378779622004631?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.3390/en19194671",
+      "crossref_url": "https://api.crossref.org/works/10.3390%2Fen19194671",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.3390/en19194671",
+        "title": [
+          "Dynamic Flexibility Duration Assessment of Low-Voltage Feeders Using Multi-Feature Trajectory Similarity Matching"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-5429-5157",
+            "authenticated-orcid": false,
+            "given": "Sihao",
+            "family": "Zhu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Huizhou Power Supply Bureau, Guangdong Power Grid Co., Ltd., Huizhou 516001, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              },
+              {
+                "role": "methodology",
+                "vocabulary": "credit"
+              },
+              {
+                "role": "writing-original-draft",
+                "vocabulary": "credit"
+              }
+            ]
+          },
+          {
+            "given": "Jinze",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huizhou Power Supply Bureau, Guangdong Power Grid Co., Ltd., Huizhou 516001, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              },
+              {
+                "role": "software",
+                "vocabulary": "credit"
+              }
+            ]
+          },
+          {
+            "given": "Guang",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huizhou Power Supply Bureau, Guangdong Power Grid Co., Ltd., Huizhou 516001, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              },
+              {
+                "role": "validation",
+                "vocabulary": "credit"
+              }
+            ]
+          },
+          {
+            "given": "Shaohui",
+            "family": "Xu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Huizhou Power Supply Bureau, Guangdong Power Grid Co., Ltd., Huizhou 516001, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              },
+              {
+                "role": "validation",
+                "vocabulary": "credit"
+              }
+            ]
+          },
+          {
+            "given": "Yun",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Electrical Engineering, Shanghai Jiao Tong University, Shanghai 200240, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              },
+              {
+                "role": "conceptualization",
+                "vocabulary": "credit"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Energies"
+        ],
+        "volume": "19",
+        "issue": "19",
+        "page": "4671",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              2
+            ]
+          ]
+        },
+        "published-print": null,
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              2
+            ]
+          ]
+        },
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              10,
+              2
+            ]
+          ],
+          "date-time": "2026-10-02T12:35:56Z",
+          "timestamp": 1790944556000
+        },
+        "URL": "https://doi.org/10.3390/en19194671",
+        "link": [
+          {
+            "URL": "https://www.mdpi.com/1996-1073/19/19/4671/pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "abstract": "<jats:p>Increasing distributed energy resource penetration makes low-voltage feeder flexibility highly time-varying and uncertain, limiting the operational value of static capacity-based estimates. This paper proposes a dynamic flexibility duration assessment framework using multi-feature trajectory similarity matching. Historical operating periods are matched using temporal, calendar, load-state, weather-state, and photovoltaic-state features to construct plausible future feeder trajectories. Metadata-constrained models then estimate upward and downward flexibility from photovoltaic systems, electric vehicle chargers, heat pumps, and battery storage, while feeder-level operating constraints and duration-dependent battery energy-feasibility checks are applied to maintain physical consistency over the requested service interval. The resulting flexibility trajectories are transformed into a future flexibility duration matrix that links flexibility magnitude, continuous service duration, and dependable level through lower-tail ensemble quantiles. Case studies based on realistic minute-level feeder data examine peak-load, photovoltaic-rich, and transition operating conditions. Under the examined ablation setting, the proposed matching method achieves lower trajectory errors than the compared similarity strategies, and the resulting assessments reveal distinct upward-dominant, downward-dominant, and bidirectional flexibility characteristics across the investigated scenarios. Parameter sensitivity analysis indicates local robustness under the tested MTSM configurations, while a cross-feeder evaluation using 20 representative feeders examines applicability beyond a single feeder. Compared with static assessment, the proposed dynamic approach provides more conservative but operationally meaningful flexibility estimates by accounting for future operating uncertainty, time-varying resource availability, and sustained service requirements. The framework offers a practical means of quantifying duration- and dependability-aware feeder-level flexibility under partial observability.</jats:p>"
+      }
+    },
+    {
+      "doi": "10.1016/j.apenergy.2024.125150",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2024.125150",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.apenergy.2024.125150",
+        "title": [
+          "Development and validation of a dynamic operating envelopes-enabled demand response scheme in low-voltage distribution networks"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1899-4571",
+            "authenticated-orcid": false,
+            "given": "Gayan",
+            "family": "Lankeshwara",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2440-5286",
+            "authenticated-orcid": false,
+            "given": "Rahul",
+            "family": "Sharma",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6017-764X",
+            "authenticated-orcid": false,
+            "given": "M.R.",
+            "family": "Alam",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5779-9090",
+            "authenticated-orcid": false,
+            "given": "Ruifeng",
+            "family": "Yan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0763-0032",
+            "authenticated-orcid": false,
+            "given": "Tapan K.",
+            "family": "Saha",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Applied Energy"
+        ],
+        "volume": "382",
+        "issue": null,
+        "page": "125150",
+        "article-number": "125150",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2025-01-01T08:54:55Z",
+          "timestamp": 1735721695000
+        },
+        "URL": "https://doi.org/10.1016/j.apenergy.2024.125150",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261924025340?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261924025340?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    },
+    {
+      "doi": "10.1016/j.apenergy.2026.128736",
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apenergy.2026.128736",
+      "status": "verified_crossref",
+      "metadata": {
+        "DOI": "10.1016/j.apenergy.2026.128736",
+        "title": [
+          "Communication-dependent flexibility planning in digitalized distribution systems via dynamic storage reservation"
+        ],
+        "author": [
+          {
+            "given": "Shuo",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhaoyuan",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ming",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Applied Energy"
+        ],
+        "volume": "426",
+        "issue": null,
+        "page": "128736",
+        "article-number": "128736",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              12
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              12
+            ]
+          ]
+        },
+        "published-online": null,
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              27
+            ]
+          ],
+          "date-time": "2026-08-27T20:23:34Z",
+          "timestamp": 1787862214000
+        },
+        "URL": "https://doi.org/10.1016/j.apenergy.2026.128736",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261926013929?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0306261926013929?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "abstract": null
+      }
+    }
+  ]
+}
