@@ -1,0 +1,6 @@
+{
+  "source": "OpenDSS EPRI mirror / Distrib/IEEETestCases/13Bus/IEEE13Nodeckt.dss",
+  "source_sha256": "a8403f9b3bee958ed8a12cb826922c804b4c146caf27f5dfbe2ee1ec2dc95723",
+  "copied_on": "2026-10-03",
+  "note": "Input feeder only; no old result arrays copied."
+}
