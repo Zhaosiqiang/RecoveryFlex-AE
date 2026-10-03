@@ -11,3 +11,5 @@ data/raw/*.csv
 data/raw/ausgrid/*.csv
 data/raw/ieee123_qsts/profiles/
 data/raw/profiles/
+
+paper/cover_letter.pdf
