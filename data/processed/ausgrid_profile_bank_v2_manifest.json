@@ -8,11 +8,11 @@
   "intervals_per_day": 48,
   "units": "average kW; source values are kWh per 30-minute interval",
   "channels": "load = GC + CL (CL missing row treated as zero); pv = GG",
-  "split_rule": "within each month: earliest 60% train, next 20% cal, latest 20% test",
+  "split_rule": "strict chronological: earliest 60% train, next 20% cal, latest 20% test",
   "split_counts": {
-    "train": 214,
-    "cal": 71,
-    "test": 80
+    "train": 219,
+    "cal": 73,
+    "test": 73
   },
   "customer_group_mapping": [
     [

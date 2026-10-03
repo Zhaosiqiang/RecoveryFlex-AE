@@ -35,10 +35,14 @@ def test_opsd_bank_is_first_difference_kw_and_selected_flags_only():
     assert "cumulative kWh first-differenced" in m["units"]
 
 
-def test_monthly_test_coverage():
+def test_forward_test_tail_is_strictly_chronological():
     idx = pd.read_csv(PROCESSED / "ausgrid_profile_bank_v2_index.csv", parse_dates=["date"])
-    months = idx.loc[idx.split == "test", "date"].dt.month
-    assert set(months.unique()) == set(range(1, 13))
+    train_last = idx.loc[idx.split == "train", "date"].max()
+    cal_last = idx.loc[idx.split == "cal", "date"].max()
+    test = idx.loc[idx.split == "test", "date"]
+    assert train_last < idx.loc[idx.split == "cal", "date"].min()
+    assert cal_last < test.min()
+    assert test.is_monotonic_increasing
 
 
 def test_loader_uses_train_only_scales_and_returns_day_interval_group():

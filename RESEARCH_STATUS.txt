@@ -1,5 +1,9 @@
-Status: corrected v1 submission candidate.
+Status: development research; strict v3 evidence complete; NOT READY FOR SUBMISSION.
 
-The corrected full run uses 214/71/80 chronological train/calibration/test dates, selects a 140 kW offer, and reports 96.25% held-out event success. Full-rearm C2=1.0; reserve-limited non-reset C2=0.5. Eleven automated tests pass and the manuscript/figure/cover-letter bundle compiles.
+Three first-round internal reviews identified scientific and implementation blockers. The former 140-kW / 96.25% v1 draft is superseded. Its files are retained for audit, not as current validated findings. A second editorial review, methods round 3, and adversarial round 2 were completed after the strict v3 rerun.
 
-The former V0 pilot remains archived under audit/invalid_v0_20261003/ and must not be cited. Public code repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE. Before final Editorial Manager upload, fill the authors' affiliation and corresponding-author fields; a persistent DOI archive may be added later.
+Completed repairs include transformer-unit accounting, terminal-power SOC integration, fixed-denominator external preprocessing, 48-interval network-constrained recovery scheduling, numerical readback tolerance, an independent zero-power gate, clustered statistics, failure records, and a compiled manuscript draft. All previously inspected 2010–2011 profiles are DEVELOPMENT DATA; re-splitting them does not create an untouched test set. The external 2012–2013 result contains 219 non-contiguous retained dates and is not called an untouched continuous holdout. No external preregistration has been performed.
+
+The remaining gate is administrative/editorial: complete affiliation and corresponding-author details, freeze and archive the release, and complete the final author/adversarial read. The paper is deliberately scoped as an offline single-feeder AC–SOC benchmark; forecast-aware control, reactive-power inverter limits, additional feeders, and economic valuation remain stated limitations. No claim of Applied Energy acceptance or guaranteed external review is made. The user explicitly requested internal review before submission; no submission is authorized at this stage.
+
+Public development repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE

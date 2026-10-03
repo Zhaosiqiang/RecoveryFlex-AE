@@ -1,0 +1,15 @@
+Dear Editors,
+
+Please consider our manuscript, “Network-feasible recovery scheduling for repeated distribution-flexibility services: an AC–SOC benchmark on the IEEE 13-node feeder,” for Applied Energy.
+
+The manuscript addresses a practical evaluation problem in distribution flexibility: a battery that can deliver one call may not be able to recover its SOC through the same feeder before a later call. We provide an auditable offline benchmark that couples an isolated OpenDSS AC snapshot audit with a chronological SOC-constrained recovery schedule. The study compares a full-horizon AC-bounded benchmark, fixed recovery, a myopic rule, and an energy-only counterfactual under the same profiles, feeder, locations, and terminal SOC condition.
+
+The strict external-date evaluation retains 219 complete dates from the public Ausgrid 2012–2013 source. At one IEEE 13-node placement, full-horizon recovery and myopic recovery are identical; at the second placement, the full-horizon benchmark gains 2.433 kW (95% date-cluster CI 1.682–3.293). The energy-only schedule fails AC replay for every baseline-feasible unit at both placements. We report these findings as a location-dependent offline screening result, with explicit limitations on hindsight information, feeder scope, and the active-power battery surrogate.
+
+The work is original, is not under consideration elsewhere, and has been approved by both authors. Siqiang Zhao contributed conceptualization, methodology, software, validation, formal analysis, investigation, data curation, visualization, and the original draft. Fengxiang Zhang contributed supervision and review/editing. There is no dedicated external funding and no competing interest. OpenAI Codex/ChatGPT and Manus were used as editorial and programming assistants; the authors verified all scientific content.
+
+The corresponding-author affiliation and e-mail will be completed before any submission. We have not submitted this manuscript or uploaded it to Editorial Manager; this letter is a draft for internal review.
+
+Sincerely,
+
+Siqiang Zhao

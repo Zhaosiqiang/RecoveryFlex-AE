@@ -1,0 +1,43 @@
+{
+  "status": "network_recovery_mechanism_v2",
+  "results_dir": "/Users/skzhao/Library/Mobile Documents/com~apple~CloudDocs/Toulouse/Codex-\u79d1\u7814\u94fa\u8def/RecoveryFlex_AE_2026/results/network_recovery_external_2012_2013_strict_v3",
+  "population": "baseline_feasible",
+  "summary": [
+    {
+      "site": "611.3",
+      "effect": "lp_minus_myopic_kw",
+      "n": 2188,
+      "spearman_rho": NaN,
+      "pearson_r": NaN,
+      "mean_effect_kw": 0.0,
+      "mean_charge_cv": 0.8003729146085985
+    },
+    {
+      "site": "611.3",
+      "effect": "lp_minus_fixed_kw",
+      "n": 2188,
+      "spearman_rho": 0.0973108101336597,
+      "pearson_r": 0.17418968071588686,
+      "mean_effect_kw": 0.15206916990402194,
+      "mean_charge_cv": 0.8003729146085985
+    },
+    {
+      "site": "634.1",
+      "effect": "lp_minus_myopic_kw",
+      "n": 2188,
+      "spearman_rho": 0.4397530435242341,
+      "pearson_r": 0.5082154130781187,
+      "mean_effect_kw": 2.402862400016293,
+      "mean_charge_cv": 0.2660265079761133
+    },
+    {
+      "site": "634.1",
+      "effect": "lp_minus_fixed_kw",
+      "n": 2188,
+      "spearman_rho": 0.21369477257819472,
+      "pearson_r": 0.36904792332383624,
+      "mean_effect_kw": 0.31268817127513726,
+      "mean_charge_cv": 0.2660265079761133
+    }
+  ]
+}

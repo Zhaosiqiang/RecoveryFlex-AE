@@ -1,0 +1,4 @@
+AC–SOC benchmarking screens repeated distribution-flexibility services.
+Recovery value changes with the battery's electrical placement.
+Full-horizon recovery gains 2.43 kW at the constrained placement.
+Energy-only offers fail AC replay on every baseline-feasible unit.

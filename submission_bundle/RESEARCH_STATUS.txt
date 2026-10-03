@@ -1,5 +1,9 @@
-Status: corrected v1 submission candidate.
+Status: development research; NOT READY FOR SUBMISSION.
 
-The corrected full run uses 214/71/80 chronological train/calibration/test dates, selects a 140 kW offer, and reports 96.25% held-out event success. Full-rearm C2=1.0; reserve-limited non-reset C2=0.5. Eleven automated tests pass and the manuscript/figure/cover-letter bundle compiles.
+Three independent internal reviews (editorial, methods, adversarial) identified scientific and implementation blockers. The former 140-kW / 96.25% v1 draft is superseded. Its files are retained for audit, not as current validated findings.
 
-The former V0 pilot remains archived under audit/invalid_v0_20261003/ and must not be cited. Public code repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE. Before final Editorial Manager upload, fill the authors' affiliation and corresponding-author fields; a persistent DOI archive may be added later.
+Completed repairs include transformer-unit accounting and terminal-power SOC integration. Adapter verification and recovery-policy redesign remain in progress. All previously inspected 2010–2011 profiles are DEVELOPMENT DATA; re-splitting them does not create an untouched test set. No external preregistration has been performed.
+
+The next evidence gate requires network-constrained recovery scheduling, explicit decision value, copper-plate and myopic baselines, physical converter limits, two feeders, and independently reserved validation data. No claim of Applied Energy acceptance or guaranteed external review is made. The user explicitly requested internal review before submission; no submission is authorized at this stage.
+
+Public development repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE

@@ -9,10 +9,10 @@
     "pv": "DE_KN_residential1_pv"
   },
   "interpolation_flag": "only the selected channel name in the semicolon-separated marker is counted",
-  "split_rule": "within each month: earliest 60% train, next 20% cal, latest 20% test",
+  "split_rule": "strict chronological: earliest 60% train, next 20% cal, latest 20% test",
   "split_counts": {
-    "train": 387,
-    "cal": 128,
-    "test": 145
+    "train": 396,
+    "cal": 132,
+    "test": 132
   }
 }

@@ -1,1 +1,9 @@
-Corrected v1 submission candidate is generated. Do not upload the archived V0 files under `audit/invalid_v0_20261003/`. The verified public repository is https://github.com/Zhaosiqiang/RecoveryFlex-AE. Fill the authors' affiliation and corresponding-author fields before Editorial Manager upload.
+Status: strict v3 evidence complete; NOT READY FOR SUBMISSION.
+
+The former 140-kW / 96.25% v1 draft is superseded. Its files are retained for audit, not as current validated findings. The current package uses the adapter-corrected strict v3 run and bounded offline-benchmark claims.
+
+Completed repairs include transformer-unit accounting, terminal-power SOC integration, fixed-denominator preprocessing, strict 48-interval scheduling, numerical readback tolerance, independent baseline validation, clustered statistics, and failure records. All previously inspected 2010–2011 profiles are DEVELOPMENT DATA; re-splitting them does not create an untouched test set. The 2012–2013 evaluation retains 219 non-contiguous dates and is not called an untouched continuous holdout.
+
+The remaining gate is affiliation/e-mail completion, archival release, and final author/adversarial review. The manuscript states the limits of one feeder, hindsight information, the active-power battery surrogate, and the absence of economic valuation. No claim of Applied Energy acceptance or guaranteed external review is made; no submission is authorized at this stage.
+
+Public development repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE

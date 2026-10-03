@@ -1,7 +1,8 @@
-# Author and submission checklist
+# Author and submission checklist — NOT READY
 
 - Journal: Applied Energy.
-- Title: Auditable repeated-service contracts for distribution-connected batteries: separating feeder limits from persistent recovery state.
+- Active working title: Network-feasible recovery policies for repeated distribution-flexibility contracts: a risk-calibrated BESS procurement study.
+- The superseded v1 title and PDF in this directory are audit artifacts and must not be uploaded.
 - Authors and order: Siqiang Zhao; Fengxiang Zhang.
 - Corresponding-author email and affiliations: fill from the authors' Editorial Manager account before upload.
 - Original work; no parallel submission; both authors approved the order and manuscript.
