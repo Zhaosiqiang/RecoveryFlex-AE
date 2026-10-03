@@ -1,7 +1,0 @@
-{
-  "source": "Open Power System Data Household Data 2020-04-15",
-  "source_url": "https://data.open-power-system-data.org/household_data/2020-04-15/household_data_15min_singleindex.csv",
-  "source_sha256": "eca7dee5ac6e53373cd0209bc05ba3383cd860bfa5d5e995f74fa78db8857c58",
-  "n_days": 661,
-  "note": "DE_KN_residential1 grid_import and pv; daily features; no random row split."
-}

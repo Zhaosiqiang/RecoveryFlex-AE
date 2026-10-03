@@ -1,9 +1,0 @@
-{
-  "source_file": "/Users/skzhao/Library/Mobile Documents/com~apple~CloudDocs/Toulouse/Codex-\u79d1\u7814\u94fa\u8def/RecoveryFlex_AE_2026/data/raw/ausgrid/Solar home 2010-2011.csv",
-  "source_sha256": "2fc1f615e22fbd8ec350cdb19f7465d3a038453fc2ffd19473ef1bd38fd28289",
-  "n_rows": 109500,
-  "n_customers": 300,
-  "date_min": "2010-07-01",
-  "date_max": "2011-06-30",
-  "note": "GC/GG paired customer-days only; no random row split; derived features for scenario scaling."
-}
