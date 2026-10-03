@@ -1,13 +1,7 @@
-# Applied Energy submission package
+# RecoveryFlex
 
-This package is generated from the corrected v1 experiment. The prior V0 pilot is invalid and is preserved only under `audit/invalid_v0_20261003/`; none of its figures, tables, or numerical claims are included here.
+This repository contains the corrected v1 research package for the Applied Energy submission candidate “Auditable repeated-service contracts for distribution-connected batteries”. The former V0 pilot was independently invalidated and is preserved under `audit/invalid_v0_20261003/` for provenance only; its numerical claims are withdrawn.
 
-Contents:
+The corrected pipeline uses an isolated OpenDSS constant-PQ adapter, a chronological Ausgrid interval profile bank, train/calibration/test offer selection, a full-rearm negative control, and a reserve-limited SOC sequence experiment. Reproduce the experiment with `python scripts/run_corrected_experiment.py`, regenerate figures with `python scripts/build_corrected_figures.py`, and run `pytest -q`.
 
-- `main.tex`, `references.bib`, `Highlights.txt`, and `cover_letter.pdf`;
-- the six corrected publication figures;
-- `results/corrected_v1/` with the frozen summary, event-level audit, sequence capacities, and command/readback audit;
-- `scripts/`, `src/`, `tests/`, and data manifests needed to reproduce the analysis;
-- `AUTHOR_AND_SUBMISSION_CHECKLIST.md` for the Editorial Manager upload fields.
-
-The code is released under the MIT License. Public repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE. A persistent DOI archive can be added after editorial review.
+Authors: Siqiang Zhao and Fengxiang Zhang. Code license: MIT. Third-party sources retain their original licenses. Public repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE.
