@@ -37,3 +37,27 @@ results/network_recovery_gate*/
 results/network_recovery_dev12/
 results/network_recovery_external_v1/
 results/network_recovery_external_2012_2013_v1/
+# Superseded development outputs and parallel-run chunks
+results/network_recovery_external_2012_2013_strict_v2/
+results/network_recovery_external_2012_2013_strict_v3/chunk_*/
+results/network_recovery_external_2012_2013_site675/
+results/network_recovery_external_2012_2013_v2/
+results/candidate_*/
+results/corrected_v2*/
+results/editorial_smoke/
+results/external_validation_v1/
+results/factorial_smoke/
+results/network_recovery_parallel_smoke/
+results/network_recovery_site_smoke/
+results/network_recovery_v2_*/
+results/pv500_smoke/
+figures/network_recovery_smoke/
+figures/network_recovery_strict_v2/
+figures/network_recovery_v2/
+data/processed/ausgrid_external_2011_2012*
+data/processed/ausgrid_external_2012_2013.npz
+data/processed/ausgrid_external_2012_2013.json
+scripts/run_external_network_recovery.py
+scripts/run_external_validation.py
+scripts/run_factorial_audit.py
+scripts/run_network_recovery_audit.py
