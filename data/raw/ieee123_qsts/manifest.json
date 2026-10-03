@@ -1,0 +1,38 @@
+{
+  "folder": "ieee123_qsts",
+  "files": [
+    {
+      "file": "Buscoords.dss",
+      "sha256": "cbd402dfb5ccbd8d8c17cfcc4f673316e3bb43ca3096c0f67ee88449643d2785"
+    },
+    {
+      "file": "IEEE123LoadShapes.dss",
+      "sha256": "445365614e83e3d31d9a406c5ab831cb9494d6b86d261282dc05bbd0845747f5"
+    },
+    {
+      "file": "IEEE123LoadsQsts.dss",
+      "sha256": "8b5b54db2e357d2caf77df17a572d2f9768764171d1fc1980bc3a74642357b11"
+    },
+    {
+      "file": "IEEE123Pv.dss",
+      "sha256": "c1e58947a4b3504a789164c61a66caf31fc036398a6143ce8f85af51c0d09056"
+    },
+    {
+      "file": "IEEE123PvShapes.dss",
+      "sha256": "a5e7724e2aac42fe817b6a9222ac3297b206051cf348868be348c78ee8963261"
+    },
+    {
+      "file": "IEEE123Regulators.dss",
+      "sha256": "8c41d5019f5a55caedd3bab6b1f3fa3c0dc72fa0bec8a335e1042df8a4ac4b86"
+    },
+    {
+      "file": "IEEELinecodes.dss",
+      "sha256": "cc1c17c16a3987e5bd1b470a0a2a9e2f5568f09675740a286e70db086865a56c"
+    },
+    {
+      "file": "master.dss",
+      "sha256": "889ec3ab8944d5f05a6aa2bafc8af9ef69b3449a1ac4e0c3365cfdb498bdafd8"
+    }
+  ],
+  "source": "public OEDISI/OpenDSS IEEE123 input; independent re-run"
+}
