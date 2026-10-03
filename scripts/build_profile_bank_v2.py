@@ -7,11 +7,11 @@ records are half-hour *energy* values, while the OPSD household release stores
 cumulative kWh.  Both are converted to average kW on their native interval
 before any aggregation or split is made.
 
-Splits are deterministic within each calendar month: the earliest 60% of
-dates are train, the next 20% calibration, and the latest 20% test.  Thus every
-month contributes to the test set and no date is shared between splits.  The
-split labels and random group assignment are written to the manifest before
-the profile arrays are used by an experiment.
+Splits are deterministic and strictly chronological: the earliest 60% of
+dates are train, the next 20% calibration, and the latest 20% test.  No future
+date contributes to train normalization or offer selection.  The split labels
+and random group assignment are written to the manifest before the profile
+arrays are used by an experiment.
 """
 from __future__ import annotations
 
@@ -38,22 +38,18 @@ def sha256(path: Path) -> str:
 
 
 def month_split(dates: Iterable[pd.Timestamp]) -> np.ndarray:
-    """Return train/calibration/test labels without looking at outcomes."""
+    """Return strictly forward train/calibration/test labels."""
     dates = pd.DatetimeIndex(sorted(pd.to_datetime(list(dates))))
     labels = np.empty(len(dates), dtype="U5")
-    frame = pd.DataFrame({"date": dates})
-    for _, idx in frame.groupby(frame.date.dt.to_period("M"), sort=True).groups.items():
-        ii = np.asarray(list(idx), dtype=int)
-        n = len(ii)
-        n_train = max(1, int(np.floor(0.60 * n)))
-        n_cal = max(1, int(np.floor(0.20 * n)))
-        # Keep a non-empty test tail even in a short month.
-        if n_train + n_cal >= n:
-            n_cal = max(0, n - n_train - 1)
-            n_train = max(1, n - n_cal - 1)
-        labels[ii[:n_train]] = "train"
-        labels[ii[n_train:n_train + n_cal]] = "cal"
-        labels[ii[n_train + n_cal:]] = "test"
+    n = len(dates)
+    n_train = max(1, int(np.floor(0.60 * n)))
+    n_cal = max(1, int(np.floor(0.20 * n)))
+    if n_train + n_cal >= n:
+        n_cal = max(0, n - n_train - 1)
+        n_train = max(1, n - n_cal - 1)
+    labels[:n_train] = "train"
+    labels[n_train:n_train + n_cal] = "cal"
+    labels[n_train + n_cal:] = "test"
     return labels
 
 
@@ -130,7 +126,7 @@ def build_ausgrid(seed: int = SEED) -> dict:
         "n_groups": int(len(groups)), "intervals_per_day": 48,
         "units": "average kW; source values are kWh per 30-minute interval",
         "channels": "load = GC + CL (CL missing row treated as zero); pv = GG",
-        "split_rule": "within each month: earliest 60% train, next 20% cal, latest 20% test",
+        "split_rule": "strict chronological: earliest 60% train, next 20% cal, latest 20% test",
         "split_counts": {k: int((splits == k).sum()) for k in ("train", "cal", "test")},
         "customer_group_mapping": [list(map(int, customers[g])) for g in groups],
     }
@@ -192,7 +188,7 @@ def build_opsd() -> dict:
         "units": "average kW; cumulative kWh first-differenced over 15 minutes",
         "channels": {"load": load_col, "pv": pv_col},
         "interpolation_flag": "only the selected channel name in the semicolon-separated marker is counted",
-        "split_rule": "within each month: earliest 60% train, next 20% cal, latest 20% test",
+        "split_rule": "strict chronological: earliest 60% train, next 20% cal, latest 20% test",
         "split_counts": {k: int((splits == k).sum()) for k in ("train", "cal", "test")},
     }
     (OUT / "opsd_profile_bank_v2_manifest.json").write_text(json.dumps(meta, indent=2))
