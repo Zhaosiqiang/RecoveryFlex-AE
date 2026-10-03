@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "From single-event headroom to repeatable services: AC-audited recovery envelopes for distributed batteries in active distribution feeders"
+authors:
+  - family-names: Zhao
+    given-names: Siqiang
+    email: siqiang.zhao@etu.toulouse-inp.fr
+  - family-names: Zhang
+    given-names: Fengxiang
+version: 0.1.0
+date-released: 2026-10-03
+license: MIT
+repository-code: "TBD_GITHUB_OR_ZENODO_URL"
+abstract: "Code and data-processing protocol for a finite-scenario, AC-audited service--recovery contract for repeatable distributed-battery flexibility."

@@ -1,0 +1,17 @@
+{
+  "rows": 192,
+  "master": "/Users/skzhao/Library/Mobile Documents/com~apple~CloudDocs/Toulouse/Codex-\u79d1\u7814\u94fa\u8def/RecoveryFlex_AE_2026/data/raw/IEEE13Nodeckt.dss",
+  "seed": 20261003,
+  "dt_h": 0.25,
+  "spec": {
+    "power_kw": 150,
+    "energy_kwh": 300,
+    "eta_charge": 0.95,
+    "eta_discharge": 0.95,
+    "soc_min": 0.05,
+    "soc_max": 0.95,
+    "soc_initial": 0.7,
+    "soc_target": 0.7
+  },
+  "note": "pilot; all accepted trajectories replayed in OpenDSS"
+}

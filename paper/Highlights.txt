@@ -1,0 +1,7 @@
+Highlights
+
+- Repeated battery calls are contracted with explicit recovery deadlines.
+- A service--recovery viability composition tracks cross-event SOC feasibility.
+- Nonlinear OpenDSS replay separates device and network recovery penalties.
+- Held-out load/PV scenarios expose a duration--deadline failure frontier.
+- State information is evaluated by its effect on deliverable flexibility.
