@@ -1,13 +1,12 @@
 cff-version: 1.2.0
-title: "From single-event headroom to repeatable services: AC-audited recovery envelopes for distributed batteries in active distribution feeders"
+title: "Auditable repeated-service contracts for distribution-connected batteries"
 authors:
   - family-names: Zhao
     given-names: Siqiang
-    email: siqiang.zhao@etu.toulouse-inp.fr
   - family-names: Zhang
     given-names: Fengxiang
-version: 0.2.0
+version: 1.0.0
 date-released: 2026-10-03
 license: MIT
-repository-code: "TBD_GITHUB_OR_ZENODO_URL"
-abstract: "Code and data-processing protocol for a finite-scenario, AC-audited service--recovery contract for repeatable distributed-battery flexibility."
+repository-code: "https://github.com/Zhaosiqiang/RecoveryFlex-AE"
+abstract: "Code and data-processing protocol for an auditable repeated-service contract that composes persistent battery recovery state with three-phase feeder AC validation."
