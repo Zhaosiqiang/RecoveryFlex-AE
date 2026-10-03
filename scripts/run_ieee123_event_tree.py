@@ -25,7 +25,7 @@ for pi,path in enumerate(paths):
  for site in SITES:
   m=FeederModel(MASTER,battery_sites=SITES,battery_kw=150,battery_kwh=300,v_limits=(.95,1.06),line_limit=1.08)
   for rec in (1.0,2.0,4.0):
-   for M in (1,2,3):
+   for M in (1,2,3,4):
     best=0
     for p in (0,25,50,75,100,125,150):
      ok,soc,aud=replay(m,site,p,1.0,rec,M,path)
