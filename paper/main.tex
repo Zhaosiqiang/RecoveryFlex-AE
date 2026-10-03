@@ -72,7 +72,7 @@ The network is the public IEEE 13-node snapshot \cite{OpenDSS13}. A battery is p
 
 \section{Results}
 \subsection{Offer selection and held-out audit}
-The frozen offer is \SI{140}{kW}. The success rates are 98.13\% on training events, 97.18\% on calibration events, and 96.25\% on the 160 held-out events (80 dates and two starts per date). The maximum held-out phase voltage is 1.0506 pu; the few failed events are retained in the audit rather than removed. The corresponding voltage and success scatter is shown in Fig.~\ref{fig:audit}. A direct command/readback test at -70, 0, 70, and \SI{140}{kW} gives terminal powers within \SI{0.005}{kW} of the command (Fig.~\ref{fig:readback}).
+The frozen offer is \SI{140}{kW}. The success rates are 98.13\% on training events, 97.18\% on calibration events, and 96.25\% on the 160 held-out events (80 dates and two starts per date). A day-cluster bootstrap gives a 95\% interval of 93.13--98.75\% for the held-out rate. The maximum held-out phase voltage is 1.0506 pu; the few failed events are retained in the audit rather than removed. The corresponding voltage and success scatter is shown in Fig.~\ref{fig:audit}. A direct command/readback test at -70, 0, 70, and \SI{140}{kW} gives terminal powers within \SI{0.005}{kW} of the command (Fig.~\ref{fig:readback}).
 
 \begin{figure}[t]
 \centering
