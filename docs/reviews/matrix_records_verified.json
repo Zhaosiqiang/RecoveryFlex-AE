@@ -1,0 +1,23 @@
+{
+  "audit_date": "2026-10-03",
+  "records": [
+    {
+      "identifier": "arXiv:2603.27161",
+      "title": "Time Window-Based Netload Range Cost Curves for Coordinated Transmission and Distribution Planning Under Uncertainty",
+      "authors": ["Yujia Li", "Alexandre Moreira", "Miguel Heleno"],
+      "year": 2026,
+      "submitted": "2026-03-28",
+      "url": "https://arxiv.org/abs/2603.27161",
+      "evidence_note": "Abstract states P1 scenario-robust per-window service envelopes and P2 post-service recovery/rebound minimization; do not claim recovery/rebound is absent from this prior."
+    },
+    {
+      "identifier": "SSRN:7356679",
+      "title": "Local Battery Flexibility Service Procurement in Active Distribution Networks with AC Power-Flow Validation and Cost-Recovery Assessment",
+      "authors": ["Chong Gao", "Wenyan Huang", "Jianwei Gao", "Ziqi Lian"],
+      "year": 2026,
+      "doi": "10.2139/ssrn.7356679",
+      "url": "https://ssrn.com/abstract=7356679",
+      "evidence_note": "Abstract states AC-power-flow-validated procurement and cost-recovery assessment on IEEE 33-bus; close prior for AC-audited procurement/cost claims."
+    }
+  ]
+}
