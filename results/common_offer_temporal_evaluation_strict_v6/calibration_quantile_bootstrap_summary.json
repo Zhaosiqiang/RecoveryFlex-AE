@@ -1,0 +1,19 @@
+{
+  "status": "common_offer_calibration_quantile_uncertainty_v1",
+  "source": "results/location_sensitivity_external_2012_2013_strict_v4/policy_rows.csv",
+  "method": "network_lp",
+  "calibration_year": "2012",
+  "n_units": 7203,
+  "n_dates": 103,
+  "n_sites": 7,
+  "point_p05_kw": 79.453125,
+  "date_cluster_bootstrap_seed": 20261003,
+  "n_boot": 5000,
+  "date_cluster_bootstrap_95ci_kw": {
+    "ci_low": 76.5234375,
+    "median": 79.453125,
+    "ci_high": 83.4375
+  },
+  "date_weighted_p05_kw": 89.75089285714286,
+  "estimand_note": "The production 79.453-kW offer is pooled and unit-weighted; the interval resamples retained dates as clusters while preserving all units within each selected date. The date-weighted lower-tail alternative is reported as a sensitivity, not substituted for the production rule."
+}

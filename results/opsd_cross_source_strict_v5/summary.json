@@ -1,0 +1,357 @@
+{
+  "status": "opsd_cross_source_strict_v5",
+  "source": "data/processed/opsd_profile_bank_v2.npz",
+  "source_sha256": "80f4064bafa5f0015470a3c45f1ad3ffaf47ab07770db6e02d7c13ef7051317f",
+  "sites": [
+    "611.3",
+    "634.1"
+  ],
+  "n_days": 132,
+  "selected_dates": [
+    "2016-10-31",
+    "2016-11-01",
+    "2016-11-02",
+    "2016-11-03",
+    "2016-11-04",
+    "2016-11-05",
+    "2016-11-06",
+    "2016-11-07",
+    "2016-11-08",
+    "2016-11-09",
+    "2016-11-10",
+    "2016-11-11",
+    "2016-11-12",
+    "2016-11-13",
+    "2016-11-14",
+    "2016-11-15",
+    "2016-11-16",
+    "2016-11-17",
+    "2016-11-18",
+    "2016-11-19",
+    "2016-11-20",
+    "2016-11-21",
+    "2016-11-22",
+    "2016-11-23",
+    "2016-11-24",
+    "2016-11-25",
+    "2016-11-26",
+    "2016-11-27",
+    "2016-11-28",
+    "2016-11-29",
+    "2016-11-30",
+    "2016-12-01",
+    "2016-12-02",
+    "2016-12-03",
+    "2016-12-04",
+    "2016-12-05",
+    "2016-12-06",
+    "2016-12-07",
+    "2016-12-08",
+    "2016-12-09",
+    "2016-12-10",
+    "2016-12-11",
+    "2016-12-12",
+    "2016-12-13",
+    "2016-12-14",
+    "2016-12-15",
+    "2016-12-16",
+    "2016-12-17",
+    "2016-12-18",
+    "2016-12-19",
+    "2016-12-20",
+    "2016-12-21",
+    "2016-12-22",
+    "2016-12-23",
+    "2016-12-24",
+    "2016-12-25",
+    "2016-12-26",
+    "2016-12-27",
+    "2016-12-28",
+    "2016-12-29",
+    "2016-12-30",
+    "2016-12-31",
+    "2017-01-01",
+    "2017-01-02",
+    "2017-01-03",
+    "2017-01-04",
+    "2017-01-05",
+    "2017-01-06",
+    "2017-01-07",
+    "2017-01-08",
+    "2017-01-09",
+    "2017-01-10",
+    "2017-01-11",
+    "2017-01-12",
+    "2017-01-13",
+    "2017-01-14",
+    "2017-01-15",
+    "2017-01-16",
+    "2017-01-17",
+    "2017-01-18",
+    "2017-01-19",
+    "2017-01-20",
+    "2017-01-21",
+    "2017-01-22",
+    "2017-01-23",
+    "2017-01-24",
+    "2017-01-25",
+    "2017-01-26",
+    "2017-01-27",
+    "2017-01-28",
+    "2017-01-29",
+    "2017-01-30",
+    "2017-01-31",
+    "2017-02-01",
+    "2017-02-02",
+    "2017-02-03",
+    "2017-02-04",
+    "2017-02-05",
+    "2017-02-06",
+    "2017-02-07",
+    "2017-02-08",
+    "2017-02-09",
+    "2017-02-10",
+    "2017-02-11",
+    "2017-02-12",
+    "2017-02-13",
+    "2017-02-14",
+    "2017-02-15",
+    "2017-02-16",
+    "2017-02-17",
+    "2017-02-18",
+    "2017-02-19",
+    "2017-02-20",
+    "2017-02-21",
+    "2017-02-22",
+    "2017-02-23",
+    "2017-02-24",
+    "2017-02-25",
+    "2017-02-26",
+    "2017-02-27",
+    "2017-02-28",
+    "2017-03-01",
+    "2017-03-02",
+    "2017-03-03",
+    "2017-03-04",
+    "2017-03-05",
+    "2017-03-06",
+    "2017-03-07",
+    "2017-03-08",
+    "2017-03-09",
+    "2017-03-10",
+    "2017-03-11"
+  ],
+  "n_profile_groups": 1,
+  "profile_processing": {
+    "source": "data/processed/opsd_profile_bank_v2.npz",
+    "source_sha256": "80f4064bafa5f0015470a3c45f1ad3ffaf47ab07770db6e02d7c13ef7051317f",
+    "native_intervals_per_day": 96,
+    "target_intervals_per_day": 48,
+    "resampling": "arithmetic mean of adjacent 15-minute average-power values",
+    "normalization": "OPSD train-only maximum per channel over all 48 half-hour intervals",
+    "train_dates": [
+      "2015-05-22",
+      "2016-06-20"
+    ],
+    "n_days": 660,
+    "n_test_days": 132,
+    "train_load_scale_kw": 4.954000000000633,
+    "train_pv_scale_kw": 8.420000000001892,
+    "load_scale_vector_kw": [
+      4.954000000000633
+    ],
+    "pv_scale_vector_kw": [
+      8.420000000001892
+    ]
+  },
+  "embedding": {
+    "load_offset": 0.4,
+    "load_gain": 0.3,
+    "load_clip": [
+      0.35,
+      0.85
+    ],
+    "pv_offset": 0.1,
+    "pv_gain": 0.6,
+    "pv_clip": [
+      0.0,
+      1.0
+    ],
+    "train_only_scales": true,
+    "pv_site": "675.1",
+    "pv_rated_kw": 300.0
+  },
+  "protocol": {
+    "horizon_intervals": 48,
+    "service_windows": [
+      [
+        8,
+        12
+      ],
+      [
+        24,
+        28
+      ]
+    ],
+    "fixed_recovery_windows": [
+      [
+        12,
+        24
+      ],
+      [
+        28,
+        48
+      ]
+    ],
+    "fixed_recovery_ratio": 0.2770083102493075,
+    "battery_energy_kwh": 2000.0,
+    "line_limit": 1.0,
+    "voltage_limits_pu": [
+      0.95,
+      1.05
+    ],
+    "controls_off": true,
+    "battery_q_kvar": 0.0,
+    "selection": "calendar-spread held-out OPSD test dates chosen before AC evaluation"
+  },
+  "summary": [
+    {
+      "site": "611.3",
+      "method": "energy_only",
+      "mean_service_kw": 198.37239583333334,
+      "median_service_kw": 187.265625,
+      "replay_success": 0.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "611.3",
+      "method": "fixed_recovery",
+      "mean_service_kw": 114.48647608901516,
+      "median_service_kw": 118.359375,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "611.3",
+      "method": "myopic_recovery",
+      "mean_service_kw": 114.55078125,
+      "median_service_kw": 118.359375,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "611.3",
+      "method": "network_lp",
+      "mean_service_kw": 114.55078125,
+      "median_service_kw": 118.359375,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "634.1",
+      "method": "energy_only",
+      "mean_service_kw": 219.83960700757575,
+      "median_service_kw": 218.75,
+      "replay_success": 0.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "634.1",
+      "method": "fixed_recovery",
+      "mean_service_kw": 145.81616950757575,
+      "median_service_kw": 156.4453125,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "634.1",
+      "method": "myopic_recovery",
+      "mean_service_kw": 145.81616950757575,
+      "median_service_kw": 156.4453125,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    },
+    {
+      "site": "634.1",
+      "method": "network_lp",
+      "mean_service_kw": 145.81616950757575,
+      "median_service_kw": 156.4453125,
+      "replay_success": 1.0,
+      "baseline_success": 1.0,
+      "n": 132
+    }
+  ],
+  "conditional_summary": [
+    {
+      "site": "611.3",
+      "method": "energy_only",
+      "conditional_mean_service_kw": 198.37239583333334,
+      "conditional_median_service_kw": 187.265625,
+      "conditional_replay_success": 0.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "611.3",
+      "method": "fixed_recovery",
+      "conditional_mean_service_kw": 114.48647608901516,
+      "conditional_median_service_kw": 118.359375,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "611.3",
+      "method": "myopic_recovery",
+      "conditional_mean_service_kw": 114.55078125,
+      "conditional_median_service_kw": 118.359375,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "611.3",
+      "method": "network_lp",
+      "conditional_mean_service_kw": 114.55078125,
+      "conditional_median_service_kw": 118.359375,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "634.1",
+      "method": "energy_only",
+      "conditional_mean_service_kw": 219.83960700757575,
+      "conditional_median_service_kw": 218.75,
+      "conditional_replay_success": 0.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "634.1",
+      "method": "fixed_recovery",
+      "conditional_mean_service_kw": 145.81616950757575,
+      "conditional_median_service_kw": 156.4453125,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "634.1",
+      "method": "myopic_recovery",
+      "conditional_mean_service_kw": 145.81616950757575,
+      "conditional_median_service_kw": 156.4453125,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    },
+    {
+      "site": "634.1",
+      "method": "network_lp",
+      "conditional_mean_service_kw": 145.81616950757575,
+      "conditional_median_service_kw": 156.4453125,
+      "conditional_replay_success": 1.0,
+      "n_baseline": 132
+    }
+  ]
+}

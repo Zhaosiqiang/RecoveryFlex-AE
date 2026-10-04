@@ -1,0 +1,57 @@
+{
+  "audit": "exact scalar-SOC cumulative-window capacity certificate",
+  "protocol": "fixed service power from frozen network_lp endpoint; scalar bounds only; no OpenDSS rerun",
+  "source_bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+  "source_policy": "results/network_recovery_external_2012_2013_strict_v4/policy_rows.csv",
+  "sites": [
+    "611.3",
+    "634.1"
+  ],
+  "max_units_argument": 0,
+  "units_selected": 4376,
+  "certificate_feasible_count": 4376,
+  "e_min_min_kwh": 165.0219298245614,
+  "e_min_median_kwh": 465.73464912280696,
+  "e_min_max_kwh": 711.3486842105262,
+  "active_lower_witness_counts": {
+    "reachability_lower": 4376
+  },
+  "lp_probes": 13128,
+  "lp_match_count": 13128,
+  "lp_match_rate": 1.0,
+  "parameters": {
+    "service_windows": [
+      [
+        8,
+        12
+      ],
+      [
+        24,
+        28
+      ]
+    ],
+    "recovery_windows": [
+      [
+        12,
+        24
+      ],
+      [
+        28,
+        48
+      ]
+    ],
+    "eta_charge": 0.95,
+    "eta_discharge": 0.95,
+    "dt_h": 0.5,
+    "initial_soc": 0.8,
+    "terminal_soc_target": 0.8,
+    "soc_min": 0.2,
+    "soc_max": 1.0,
+    "terminal_mode": "exact"
+  },
+  "files": [
+    "certificate_rows.csv",
+    "lp_crosscheck.csv",
+    "summary.json"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "independent_calendar_factorial_audit",
+  "capacity_kwh": 2000.0,
+  "horizons": [
+    4,
+    8,
+    12,
+    24
+  ],
+  "sites": [
+    "611.3",
+    "634.1"
+  ],
+  "n_units": 70016,
+  "n_dates": 219,
+  "output": "results/calendar_mechanism_audit_round1",
+  "note": "finite means exact canonical horizon rule; complete means all service starts visible; always means terminal target available at every recovery decision."
+}

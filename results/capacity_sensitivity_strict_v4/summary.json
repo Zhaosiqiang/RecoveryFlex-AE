@@ -1,0 +1,42 @@
+{
+  "capacities_kwh": [
+    250.0,
+    500.0,
+    1000.0,
+    2000.0
+  ],
+  "methods": [
+    "network_lp",
+    "fixed_recovery",
+    "myopic_recovery"
+  ],
+  "n_rows": 52560,
+  "n_units": 4380,
+  "source_bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+  "protocol": "dispatch sensitivity under frozen audited scalar bounds; no OpenDSS rerun",
+  "service_windows": [
+    [
+      8,
+      12
+    ],
+    [
+      24,
+      28
+    ]
+  ],
+  "fixed_recovery_windows": [
+    [
+      12,
+      24
+    ],
+    [
+      28,
+      48
+    ]
+  ],
+  "bootstrap": {
+    "seed": 20261003,
+    "n_boot": 5000,
+    "cluster": "date"
+  }
+}

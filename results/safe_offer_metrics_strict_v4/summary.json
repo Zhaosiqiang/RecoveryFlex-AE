@@ -1,0 +1,13 @@
+{
+  "status": "descriptive_safe_offer_metrics",
+  "target_coverages": [
+    0.9,
+    0.95,
+    0.99
+  ],
+  "service_hours": 4.0,
+  "n_rows": 24,
+  "shortfall_energy_unit": "kWh",
+  "replay_definition": "frontier schedule replay rate among units at or above the quantile offer; the quantile offer itself is not freshly AC-replayed",
+  "warning": "Empirical coverage over retained baseline-feasible units is not a future delivery guarantee."
+}

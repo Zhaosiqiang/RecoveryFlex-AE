@@ -1,0 +1,14 @@
+RecoveryFlex-AE v5 runtime snapshot
+Captured: 2026-10-04
+Python: 3.13.13
+NumPy: 2.3.5
+SciPy: 1.16.3 (HiGHS backend through scipy.optimize.linprog)
+pandas: 2.3.3
+matplotlib: 3.10.7
+OpenDSSDirect.py: 0.9.4
+DSS C-API: 0.14.5 (OpenDSS SVN 3723, 64-bit build)
+Tectonic: 0.15.0 (local compiler used for the standalone manuscript build)
+
+The package's requirements.txt lists import-level dependencies. This file records
+versions used for the v5 numerical rerun and manuscript compilation; it is
+provenance, not a platform-independent binary lockfile.

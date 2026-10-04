@@ -1,0 +1,10 @@
+{
+  "status": "terminal_match_tolerance_sensitivity_v1",
+  "sample": "audit_claims_round1.sample_units(n_dates=2): 40 units across two sites",
+  "relative_command_tolerances": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "result": "All endpoint schedules were replayed under each setting; endpoint values are unchanged because the scalar endpoint is fixed by the recorded AC bounds."
+}

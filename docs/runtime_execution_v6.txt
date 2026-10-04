@@ -1,0 +1,42 @@
+RecoveryFlex-AE v6 execution record
+Captured: 2026-10-04 (Europe/Paris)
+
+Host
+- macOS model: Mac16,1
+- logical CPUs: 10
+- physical memory: 24 GiB
+- working tree: RecoveryFlex_AE_2026
+
+Software
+- Python: 3.13.13 (miniconda runtime)
+- NumPy: 2.3.5
+- SciPy: 1.16.3 (HiGHS backend)
+- pandas: 2.3.3
+- matplotlib: 3.10.7
+- OpenDSSDirect.py: 0.9.4
+- DSS C-API: 0.14.5 (64-bit; see docs/runtime_environment_v5.txt)
+- Tectonic: 0.16.9 (local compiler; the older v5 note recorded 0.15.0)
+
+Reproducible commands and observed wall time
+1. Full test suite:
+   /Users/skzhao/miniconda3/bin/python -m pytest -q
+   40 passed; wall 8.24 s (user 6.79 s, system 0.36 s).
+2. Three-call grid rerun in an isolated temporary output directory:
+   /usr/bin/time -p /Users/skzhao/miniconda3/bin/python scripts/run_three_call_grid_v1.py \
+     --bounds results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv \
+     --policy results/network_recovery_external_2012_2013_strict_v4/policy_rows.csv \
+     --out-dir <temporary-output>
+   70,016 detail rows and 32 summary rows; wall 261.57 s, user 254.15 s,
+   system 4.00 s. The regenerated three_call_rows.csv, three_call_summary.csv,
+   and metadata.json are byte-identical to results/three_call_grid_v1.
+3. Manuscript build:
+   /opt/homebrew/bin/tectonic -X compile --keep-logs --outdir <temporary-build> paper/main_v5.tex
+   success; 28 pages; no LaTeX errors. The build emits underfull-box, two small
+   overfull-box, and duplicate-hyperref-anchor warnings; the rendered pages were
+   visually inspected and no clipping or figure overlap was found.
+
+Parallelism
+- The frozen strict-v4 primary result metadata records 4 workers; the three-call
+  rerun above is a deterministic single-process grid audit. All result manifests
+  retain protocol and source hashes. Timing is host-specific and is not a claim
+  about production throughput.

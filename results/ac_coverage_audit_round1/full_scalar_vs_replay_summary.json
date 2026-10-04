@@ -1,0 +1,16 @@
+{
+  "status": "full_scalar_endpoint_replay_audit_v1",
+  "source": "results/network_recovery_external_2012_2013_strict_v4/policy_rows.csv",
+  "method": "network_lp",
+  "baseline_gate": "baseline_feasible == 1",
+  "n_rows": 4376,
+  "n_dates": 219,
+  "sites": [
+    "611.3",
+    "634.1"
+  ],
+  "n_replay_pass": 4376,
+  "max_abs_observed_gap_kw": 0.0,
+  "interpretation": "The authoritative policy table records a successful nonlinear replay for every baseline-gated scalar endpoint. This supports no observed negative scalar-minus-replay gap over 4,376 rows; it does not establish a joint nonlinear AC feasible-set equivalence or transferability.",
+  "script": "scripts/build_full_scalar_replay_audit.py"
+}
