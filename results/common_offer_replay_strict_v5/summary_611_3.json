@@ -1,0 +1,11 @@
+{
+  "status": "common_offer_replay_strict_v5",
+  "site": "611.3",
+  "threshold_kw": 89.296875,
+  "target_empirical_coverage": 0.95,
+  "n_units": 2188,
+  "planner_feasible_rate": 0.95018281535649,
+  "replay_feasible_rate": 0.95018281535649,
+  "source": "data/processed/ausgrid_external_2012_2013_strict.npz",
+  "protocol": "fixed network-LP service_power_kw with nonlinear OpenDSS replay"
+}

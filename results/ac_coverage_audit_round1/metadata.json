@@ -1,0 +1,21 @@
+{
+  "status": "ac_coverage_audit_round1",
+  "primary_results": "results/network_recovery_external_2012_2013_strict_v4",
+  "scope": {
+    "replay_endpoint": "200 baseline-gated units (10 dates x 10 groups x 2 sites); scalar endpoint tested first and any failing endpoint gets a 12-step lower-power search; sample diagnostic only",
+    "prefix": "same sample, all 48 intervals and both signs on 0--300 kW at 20 kW grid; later-feasible-after-failure is explicitly counted",
+    "numerical": "40 units (2 dates x 10 groups x 2 sites), tol 0/1e-6/1e-5, command readback floor 0/0.01 kW, grid steps 10/20/40 kW",
+    "device": "all 4,380 primary units, frozen scalar-bound dispatch with symmetric added power caps; no fresh AC replay",
+    "embedding": "120 sampled profile/site/variant rows (6 dates x 2 groups x 2 sites x 5 variants), fresh snapshot AC bounds; diagnostic only"
+  },
+  "caveat": "No multi-feeder, phase-allocation, inverter-Q, kVA curve, or field experiment is claimed by this audit.",
+  "counts": {
+    "gate_rows": 4380,
+    "policy_rows": 17520,
+    "replay_sample_rows": 200,
+    "prefix_rows": 19200,
+    "numerical_rows": 720,
+    "device_rows": 10,
+    "embedding_rows": 10
+  }
+}

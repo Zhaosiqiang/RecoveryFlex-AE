@@ -1,0 +1,22 @@
+{
+  "copied_on": "2026-10-03",
+  "license_notice": "THIRD_PARTY_LICENSES.txt",
+  "files": [
+    {
+      "file": "IEEE13Nodeckt.dss",
+      "source": "https://raw.githubusercontent.com/tshort/OpenDSS/master/Distrib/IEEETestCases/13Bus/IEEE13Nodeckt.dss",
+      "sha256": "a8403f9b3bee958ed8a12cb826922c804b4c146caf27f5dfbe2ee1ec2dc95723"
+    },
+    {
+      "file": "IEEELineCodes.dss",
+      "source": "https://raw.githubusercontent.com/tshort/OpenDSS/master/Distrib/IEEETestCases/123Bus/IEEELineCodes.DSS",
+      "sha256": "4bc8e3a0b24ad7b1cb4321f1c3b6c8458b646dd3a83b3cd11cccc02444624cb2"
+    },
+    {
+      "file": "IEEE13Node_BusXY.csv",
+      "source": "https://raw.githubusercontent.com/tshort/OpenDSS/master/Distrib/IEEETestCases/13Bus/IEEE13Node_BusXY.csv",
+      "sha256": "f8dd1528c72f339ebf41bf1355ed64ef12fbe30864fcc839ed5e5e9dc527846e"
+    }
+  ],
+  "note": "Small public input fixtures only; no old result arrays copied."
+}

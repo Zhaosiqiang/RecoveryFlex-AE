@@ -1,0 +1,30 @@
+Binding ablation audit (strict-v5 CSVs)
+
+Question: does the 2-MWh network-LP endpoint equal the minimum audited export limit over service intervals [8,12) and [24,28), and when does a smaller capacity fall below it?
+Service intervals (zero-based half-hour positions): 8,9,10,11,24,25,26,27.
+Equality tolerance: 1.0e-09 kW; exact equality is also reported.
+The primary population is baseline_feasible; all rows are retained as a diagnostic.
+
+2-MWh equality summary:
+  ausgrid site=611.3 population=all: n=2190, exact=2190/2190, tol=2190/2190, max|delta|=0 kW, below=0
+  ausgrid site=611.3 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, max|delta|=0 kW, below=0
+  ausgrid site=634.1 population=all: n=2190, exact=2189/2190, tol=2189/2190, max|delta|=31.401171875 kW, below=1
+  ausgrid site=634.1 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, max|delta|=0 kW, below=0
+  opsd site=611.3 population=all: n=132, exact=132/132, tol=132/132, max|delta|=0 kW, below=0
+  opsd site=611.3 population=baseline_feasible: n=132, exact=132/132, tol=132/132, max|delta|=0 kW, below=0
+  opsd site=634.1 population=all: n=132, exact=132/132, tol=132/132, max|delta|=0 kW, below=0
+  opsd site=634.1 population=baseline_feasible: n=132, exact=132/132, tol=132/132, max|delta|=0 kW, below=0
+
+Capacity summary (network_lp only; delta = frontier - min service-window export):
+  ausgrid site=611.3 E=250 kWh: below=0.995887 (2179/2188), date-mean delta=-57.287180 kW, unit-mean delta=-57.261197 kW
+  ausgrid site=611.3 E=500 kWh: below=0.340037 (744/2188), date-mean delta=-3.967153 kW, unit-mean delta=-3.957560 kW
+  ausgrid site=611.3 E=1000 kWh: below=0.000000 (0/2188), date-mean delta=0.000000 kW, unit-mean delta=0.000000 kW
+  ausgrid site=611.3 E=2000 kWh: below=0.000000 (0/2188), date-mean delta=0.000000 kW, unit-mean delta=0.000000 kW
+  ausgrid site=634.1 E=250 kWh: below=0.981718 (2148/2188), date-mean delta=-67.427242 kW, unit-mean delta=-67.391239 kW
+  ausgrid site=634.1 E=500 kWh: below=0.448355 (981/2188), date-mean delta=-11.501693 kW, unit-mean delta=-11.479697 kW
+  ausgrid site=634.1 E=1000 kWh: below=0.000000 (0/2188), date-mean delta=0.000000 kW, unit-mean delta=0.000000 kW
+  ausgrid site=634.1 E=2000 kWh: below=0.000000 (0/2188), date-mean delta=0.000000 kW, unit-mean delta=0.000000 kW
+
+Interpretation: equality means the full-horizon LP is capped by the tightest service-window export bound for that unit. A negative delta means the chronological SOC/recovery constraints (or the capacity setting) lower the frontier below that network bound. This is an ablation of the existing CSV endpoints, not a new AC solve or a causal attribution of all physical limits.
+
+The source and file paths used are recorded in summary.json.

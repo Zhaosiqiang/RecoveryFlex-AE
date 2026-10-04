@@ -1,0 +1,17 @@
+site,method,outcome,cluster_level,estimate,ci_low,ci_high,n_pairs,n_dates,n_blocks
+611.3,network_lp,service_kw,calendar_block_stratified_date,128.52565718543886,126.11270839278917,131.0228140062151,2188,219,3
+611.3,network_lp,replay_feasible,calendar_block_stratified_date,1.0,1.0,1.0,2188,219,3
+611.3,fixed_recovery,service_kw,calendar_block_stratified_date,128.36783929477423,125.83540930206748,130.8397174816083,2188,219,3
+611.3,fixed_recovery,replay_feasible,calendar_block_stratified_date,1.0,1.0,1.0,2188,219,3
+611.3,myopic_recovery,service_kw,calendar_block_stratified_date,128.52565718543886,126.03542895421106,131.0105058504566,2188,219,3
+611.3,myopic_recovery,replay_feasible,calendar_block_stratified_date,1.0,1.0,1.0,2188,219,3
+611.3,energy_only,service_kw,calendar_block_stratified_date,231.2810359589041,228.27156464041096,234.4191120861872,2188,219,3
+611.3,energy_only,replay_feasible,calendar_block_stratified_date,0.0,0.0,0.0,2188,219,3
+634.1,network_lp,service_kw,calendar_block_stratified_date,138.5105395421106,135.01254726740865,142.11739569460298,2188,219,3
+634.1,network_lp,replay_feasible,calendar_block_stratified_date,1.0,1.0,1.0,2188,219,3
+634.1,fixed_recovery,service_kw,calendar_block_stratified_date,138.18665751046424,134.55015528978788,141.7786731414098,2188,219,3
+634.1,fixed_recovery,replay_feasible,calendar_block_stratified_date,1.0,1.0,1.0,2188,219,3
+634.1,myopic_recovery,service_kw,calendar_block_stratified_date,136.07760626502102,132.912008833702,139.27487012398495,2188,219,3
+634.1,myopic_recovery,replay_feasible,calendar_block_stratified_date,0.9995433789954338,0.9986301369863013,1.0,2188,219,3
+634.1,energy_only,service_kw,calendar_block_stratified_date,247.16380089421614,246.02004554318873,248.29158481576613,2188,219,3
+634.1,energy_only,replay_feasible,calendar_block_stratified_date,0.0,0.0,0.0,2188,219,3

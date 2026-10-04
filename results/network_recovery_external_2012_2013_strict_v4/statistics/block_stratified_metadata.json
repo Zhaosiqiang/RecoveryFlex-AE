@@ -1,0 +1,33 @@
+{
+  "status": "calendar_block_stratified_date_bootstrap_v1",
+  "source_results": "results/network_recovery_external_2012_2013_strict_v4",
+  "population": "baseline_feasible",
+  "blocks": [
+    {
+      "label": "2012-07--2012-10",
+      "start": "2012-07-01",
+      "end": "2012-10-11"
+    },
+    {
+      "label": "2013-01",
+      "start": "2013-01-01",
+      "end": "2013-01-25"
+    },
+    {
+      "label": "2013-04--2013-06",
+      "start": "2013-04-01",
+      "end": "2013-06-30"
+    }
+  ],
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 20261003,
+    "resampling": "dates within each block with observed block-date weights"
+  },
+  "interpretation": "descriptive retained-sample sensitivity; does not remove dependence between blocks and is not a future delivery guarantee",
+  "files": [
+    "block_summary.csv",
+    "block_stratified_summary.csv",
+    "block_stratified_metadata.json"
+  ]
+}

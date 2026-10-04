@@ -1,0 +1,7 @@
+RecoveryFlex Applied Energy v5.0.1 immutable snapshot
+Tag: v5.0.1
+Repository: https://github.com/Zhaosiqiang/RecoveryFlex-AE
+Public manifest SHA-256: 18343e429b3f2ef2ed86b9ece4836f125f1945b53a9012a1c9a2b11b158b54df
+Manuscript PDF SHA-256: db3007f68506d628bedafb351b4a69a2a063827ef9b1c67a92879cd68101eb9e
+Public snapshot ZIP SHA-256: 2aeb9864fed7387e1bd10c73d4633cbcb41d6695203b2c38e5a8bb46252a75ce
+The manifest covers the 254 public snapshot files; this identifier file is tag metadata and is intentionally outside that manifest.

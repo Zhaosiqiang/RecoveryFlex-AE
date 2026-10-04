@@ -1,0 +1,18 @@
+{
+  "status": "deterministic_headroom_margin_sensitivity",
+  "bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+  "audit": "results/network_recovery_external_2012_2013_strict_v4/baseline_zero_audit.csv",
+  "margins": [
+    0.0,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "energy_kwh": 2000.0,
+  "n_rows": 70080,
+  "n_sites": 2,
+  "n_dates": 219,
+  "replay_definition": "tightened scalar-bound equivalence; no fresh OpenDSS replay",
+  "interpretation": "Deterministic headroom stress, not a forecast-error distribution or probabilistic guarantee.",
+  "summary_csv": "results/headroom_margin_sensitivity_strict_v4/date_cluster_summary.csv"
+}
