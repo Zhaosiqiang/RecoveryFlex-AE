@@ -1,0 +1,35 @@
+{
+  "status": "binding_ablation_strict_v5",
+  "service_intervals": [
+    8,
+    9,
+    10,
+    11,
+    24,
+    25,
+    26,
+    27
+  ],
+  "tolerance_kw": 1e-09,
+  "capacities_kwh": [
+    250.0,
+    500.0,
+    1000.0,
+    2000.0
+  ],
+  "primary_population": "baseline_feasible",
+  "sources": {
+    "ausgrid": {
+      "bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+      "primary_policy": "results/network_recovery_external_2012_2013_strict_v4/policy_rows.csv",
+      "n_primary_units": 4380,
+      "capacity_2mwh_vs_primary_max_abs_delta_kw": 0.0,
+      "capacity_policy": "results/capacity_sensitivity_strict_v4/policy_rows.csv"
+    },
+    "opsd": {
+      "bounds": "results/opsd_cross_source_strict_v5/ac_bounds.csv",
+      "primary_policy": "results/opsd_cross_source_strict_v5/policy_rows.csv",
+      "n_primary_units": 264
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "status": "package_relocated_result_manifest",
+  "results_dir": "results/network_recovery_external_2012_2013_strict_v4",
+  "figures_dir": "figures",
+  "source_manifest": "data/processed/ausgrid_external_2012_2013_strict.json",
+  "operating_point_embedding": {
+    "normalization": "earliest-60-percent train split (2010-07-01 to 2011-02-04) group maxima over all 48 half-hour intervals",
+    "profile_normalization": "train_only_maximum_per_group_and_channel",
+    "load_offset": 0.4,
+    "load_gain": 0.3,
+    "load_clip": [
+      0.35,
+      0.85
+    ],
+    "pv_offset": 0.1,
+    "pv_gain": 0.6,
+    "pv_clip": [
+      0.0,
+      1.0
+    ],
+    "pv_rated_kw": 300.0,
+    "pv_site": "675.1",
+    "global_native_load_scale": true,
+    "native_load_scales_kvar_with_kw": true,
+    "controls_off": true,
+    "battery_reactive_power_kvar": 0.0,
+    "calibration_status": "synthetic_stress_embedding_not_customer_to_bus_calibration",
+    "load_scale": {
+      "formula": "clip(0.40 + 0.30 * load_kw / train_load_scale_kw, 0.35, 0.85)",
+      "offset": 0.4,
+      "gain": 0.3,
+      "clip": [
+        0.35,
+        0.85
+      ],
+      "scope": "all_native_feeder_loads_P_and_Q"
+    },
+    "pv": {
+      "bus_phase": "675.1",
+      "rated_kw": 300.0,
+      "formula": "P=-300 * clip(0.10 + 0.60 * pv_kw / train_pv_scale_kw, 0, 1)",
+      "q_kvar": 0.0
+    },
+    "battery": {
+      "sites": [
+        "611.3",
+        "634.1"
+      ],
+      "q_kvar": 0.0,
+      "model": "constant_PQ_active_power_surrogate"
+    },
+    "controls": "off",
+    "pcc_import_cap": null
+  },
+  "files": {
+    "data/processed/ausgrid_external_2012_2013_strict.json": "3212b67f509801749904cd6b3798c9a900d02c185ac1383e970e124e22054010",
+    "figures/capacity_frontier.pdf": "1735ce6a2dd70650d6a2a47bf74622df52b8c5ddb4a1ed331c154604bba58545",
+    "figures/capacity_frontier.png": "83ccb450c50eea5a3f9d03e86a21a0ccc9392a229f00309113fda74f8eecc304",
+    "figures/causal_horizon_heatmap.pdf": "ab5e384677027d25b0061d9525c362c90eeb8340ab27894c1f2f34ef26e5f2bf",
+    "figures/causal_horizon_heatmap.png": "42296491c71b784364cdd37ec5bff8a3565cb1fe16d40b28ff174ffe07707bc2",
+    "figures/common_offer_temporal_evaluation.pdf": "5d71b621bc7234291b96d0f0ba6db0d4e9cb061fff7e34eaf584c92beda1b39f",
+    "figures/common_offer_temporal_evaluation.png": "69d4cf83095a205aa80f8cdf0b52ed05a480b40a61d9d6c21e45e3550f9e1423",
+    "figures/fig1_external_frontier.pdf": "de2fab2f93ebcfa7e43150cd30436c9efe9860cabd895a1702c90319b2874a61",
+    "figures/fig1_external_frontier.png": "4b022ebad139a42f6f5bd19af1289b7f54addf72f607345bb5baf515136ac672",
+    "figures/fig2_opsd_cross_source_frontier.pdf": "55f9c670bfd52132844d804f56523e861c850ad18c9af94a95c9d02661a23d79",
+    "figures/fig2_opsd_cross_source_frontier.png": "3f61b5d5c860ac5ea44436741fab369d6d47828423525952c3312b53c9696499",
+    "figures/fig2_recovery_trace.pdf": "b8dce8e7383a73b4b8334a9de64714450986656cbadf86463321e73b7c58f13f",
+    "figures/fig2_recovery_trace.png": "61033f5b431541c170c5a218abc8564e2c74437016e1fb283f3456aebbce1ad6",
+    "figures/fig3_failure_rates.pdf": "1b1ffa8419225019ac7420db58b541398acf6539eaab1e246db52b44b6d36614",
+    "figures/fig3_failure_rates.png": "3f99357adf74bcba66b8f664a1a28830339db64518731bf5c064e0e4042758bd",
+    "figures/fig4_headroom_mechanism.pdf": "7887b0eb3d5f3207ff890d44ba9216adb40abbcda193154390c86b5e6aac6e76",
+    "figures/fig4_headroom_mechanism.png": "f730066bf373571ad22368bd90baa4688b6f001d055de46565afdf080550b98e",
+    "figures/fig5_graphical_abstract.pdf": "29b0dfe66ed32a21c5e62bd0461b66f6399190020cf76e03a0611360c2bcb0f9",
+    "figures/fig5_graphical_abstract.png": "d5559dfdbb4eebcf4dcdd7f3ea9582b3368260f8d706b6c8c118b6688ec8fe3a",
+    "figures/headroom_margin_frontier.pdf": "874ed8b0b7bbfedb2b13b51d4629e91945e63feeae72754d45380bf9a7892c13",
+    "figures/headroom_margin_frontier.png": "a0ae9b68cc76c502855c63d82127616c15b33f7c137de018d8eaa23d76460a49",
+    "figures/location_frontier.pdf": "7d11a0ea21c6c6b92137cfd5d217556828d1b9f397c17f78be37ef5ee0acfc8b",
+    "figures/location_frontier.png": "9205216292df2d75f0110314da5e207b02423de9f9c77737da8657ee1b079142",
+    "figures/safe_offer_frontier.pdf": "879112e26d870777b1b234d40f9fb46879624f37f8f3b082294de47ec7d29133",
+    "figures/safe_offer_frontier.png": "3ccb55bce2e049789f12875e298b57b83e302d106930a121b1bd3f504652f6e5",
+    "figures/three_call_chronology_grid.pdf": "d3692b82885fedde223bf32fad53fa182e6fff79a0fc14f0fc285b44d0893647",
+    "figures/three_call_chronology_grid.png": "7d34deb8a6202d69c9246ff5b611c711e98611b84d42d82bfef7b8ab936f9333",
+    "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv": "408410e32f52af9787f5a9f8e19af3abff0d56cb4007d59e5d022d7255b8cfc8",
+    "results/network_recovery_external_2012_2013_strict_v4/baseline_zero_audit.csv": "e1068fd1fedfdba732c7b53de66c9fc2c87caa6a53d0b7e86ea5fc22df049e30",
+    "results/network_recovery_external_2012_2013_strict_v4/failure_records_summary.json": "5397e9aa2874dc5356f6acb0e1a5367cbdb785b421ad0ebb6dc616515e1d5fd0",
+    "results/network_recovery_external_2012_2013_strict_v4/mechanism/headroom_effects.csv": "8f233291fe37fd45bb19d0973a1d3d6d3c9ea664cfca17c3962083db640af7bc",
+    "results/network_recovery_external_2012_2013_strict_v4/mechanism/mechanism_summary.json": "369e3bd69e8f872f26ecffb3e6ad2f97e693ff7361ee74c4a7c98526bee966b2",
+    "results/network_recovery_external_2012_2013_strict_v4/policy_rows.csv": "1f8f7ffd2dd8e3b8c74d7f93bcc531ed9b73152528cfe0c545c104ae344cb9fa",
+    "results/network_recovery_external_2012_2013_strict_v4/representative_trace.csv": "b366e193a2f625984fd4b54496dca320180fff29ad3456351fdf93030a9afbaf",
+    "results/network_recovery_external_2012_2013_strict_v4/statistics/block_leave_one_out.csv": "a2cba891a585a5e80f4fb096548611f2ddb124fe8dd04c9daafa5213e0caf93d",
+    "results/network_recovery_external_2012_2013_strict_v4/statistics/method_summary.csv": "8a1553c876eeadb337e44df1395e080993a04dc83672a46bb8178814e1a3f743",
+    "results/network_recovery_external_2012_2013_strict_v4/statistics/paired_effects.csv": "e2c3d77d654e283094f16734ffdac09c9c694dea920ddbee671cfe430b6e5a7f",
+    "results/network_recovery_external_2012_2013_strict_v4/statistics/statistics.csv": "118b15d0aef518e8674a1c9a8db7a302440bd93170a1172947daae2648aecf62",
+    "results/network_recovery_external_2012_2013_strict_v4/statistics/statistics.json": "94511cd12aaa434f64c752a7ac0acb991b8865875fff47b987fa1b80b8332943",
+    "results/network_recovery_external_2012_2013_strict_v4/summary.json": "5d57c5b185c5e3334cca2348e5b3acc17520523b7158e74b9664ed9af153090c"
+  },
+  "path_policy": "All paths are relative to this package; excluded chunk artifacts are omitted."
+}

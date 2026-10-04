@@ -1,0 +1,9 @@
+source,site,population,n_units,n_equal_exact,n_equal_tolerance,n_below_min_export,max_abs_delta_kw,mean_delta_kw
+ausgrid,611.3,all,2190,2190,2190,0,0.0,0.0
+ausgrid,611.3,baseline_feasible,2188,2188,2188,0,0.0,0.0
+ausgrid,634.1,all,2190,2189,2189,1,31.40117187499999,-0.014338434646118716
+ausgrid,634.1,baseline_feasible,2188,2188,2188,0,0.0,0.0
+opsd,611.3,all,132,132,132,0,0.0,0.0
+opsd,611.3,baseline_feasible,132,132,132,0,0.0,0.0
+opsd,634.1,all,132,132,132,0,0.0,0.0
+opsd,634.1,baseline_feasible,132,132,132,0,0.0,0.0

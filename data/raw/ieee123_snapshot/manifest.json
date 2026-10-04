@@ -1,0 +1,28 @@
+{
+  "folder": "ieee123_snapshot",
+  "files": [
+    {
+      "file": "Buscoords.dss",
+      "sha256": "cbd402dfb5ccbd8d8c17cfcc4f673316e3bb43ca3096c0f67ee88449643d2785"
+    },
+    {
+      "file": "IEEE123Loads.dss",
+      "sha256": "4ca85d0d6a12286d43277fc63a6e0ff66a3ce9435f180a482c9e389ead380db3"
+    },
+    {
+      "file": "IEEE123Regulators.dss",
+      "sha256": "8c41d5019f5a55caedd3bab6b1f3fa3c0dc72fa0bec8a335e1042df8a4ac4b86"
+    },
+    {
+      "file": "IEEELinecodes.dss",
+      "sha256": "cc1c17c16a3987e5bd1b470a0a2a9e2f5568f09675740a286e70db086865a56c"
+    },
+    {
+      "file": "master.dss",
+      "sha256": "f61468a107ef974a8d928f08dac3f11715bab161056a75e66d65e9bb202afa06"
+    }
+  ],
+  "source": "public OEDISI/OpenDSS IEEE123 input; independent re-run",
+  "source_url": "https://github.com/openEDI/oedisi-ieee123/tree/main/snapshot",
+  "license": "BSD-3-Clause; see ../THIRD_PARTY_LICENSES.txt"
+}

@@ -1,0 +1,103 @@
+{
+  "status": "three_call_grid_v1",
+  "question": "Does a third call create a chronological recovery-window contraction after aggregate service-floor, initial-SOC, prefix, and total-recovery relaxations?",
+  "contract": {
+    "service_windows": [
+      [
+        8,
+        12
+      ],
+      "[s,s+4)",
+      [
+        32,
+        36
+      ]
+    ],
+    "second_start_intervals": [
+      14,
+      16,
+      20,
+      24
+    ],
+    "recovery_windows": "[12,s), [s+4,32), [36,48)",
+    "terminal_visibility": "always",
+    "terminal_mode": "exact",
+    "capacities_kwh": [
+      250.0,
+      500.0,
+      1000.0,
+      2000.0
+    ],
+    "initial_soc": 0.8,
+    "terminal_soc": 0.8,
+    "soc_bounds": [
+      0.2,
+      1.0
+    ],
+    "efficiencies": [
+      0.95,
+      0.95
+    ],
+    "dt_h": 0.5,
+    "sites": [
+      "611.3",
+      "634.1"
+    ]
+  },
+  "protocol_sha256": "afe875c2de5bf747591567dd58af2fd2a0dab7837f72547c6b056949b10905f5",
+  "population": {
+    "sites": [
+      "611.3",
+      "634.1"
+    ],
+    "baseline_gated_units": 4376,
+    "dates": 219,
+    "groups": 10
+  },
+  "estimand_version": "date-vs-unit-weighted-v1",
+  "estimands": {
+    "primary": "date-weighted mean of date means of aggregate relaxed bound minus exact scalar LP endpoint (reported as a non-negative numerical-tolerance-clipped gap)",
+    "primary_raw": "relaxed_bound_kw - service_power_lp_kw",
+    "unit_weighted_secondary": "pooled mean over date--group--site rows; retained in *_unit_mean_kw fields and never mixed with primary CIs",
+    "date_weighted_definition": "For each site/capacity/start cell, average rows within each retained date, then average the 219 date means with equal date weights",
+    "aggregate_relaxation": "minimum of service floor, first-call SOC, total recovery, and cumulative prefix bounds at calls 2 and 3",
+    "contraction_clip": "max(0, raw gap); values below 1e-7 kW are numerical zero",
+    "uncertainty": "date-cluster bootstrap over date means, 5000 replicates, seed 20261003"
+  },
+  "main_cell_estimands": {
+    "site": "634.1",
+    "capacity_kwh": 500.0,
+    "second_start": 24,
+    "n_units": 2188,
+    "n_dates": 219,
+    "date_weighted": {
+      "relaxed_bound_kw": 126.90205846674567,
+      "service_power_lp_kw": 122.613676262347,
+      "contraction_kw": 4.288382204398685,
+      "ci_low_kw": 3.783633248385781,
+      "ci_high_kw": 4.834026218599469
+    },
+    "unit_weighted": {
+      "relaxed_bound_kw": 126.8888710779798,
+      "service_power_lp_kw": 122.61023626519297,
+      "contraction_kw": 4.278634812786847
+    },
+    "warning": "Do not subtract a date-weighted bound from a unit-weighted endpoint; that mixing produced the historical 4.275-vs-4.288 discrepancy."
+  },
+  "source_hashes": {
+    "bounds": "408410e32f52af9787f5a9f8e19af3abff0d56cb4007d59e5d022d7255b8cfc8",
+    "policy": "1f8f7ffd2dd8e3b8c74d7f93bcc531ed9b73152528cfe0c545c104ae344cb9fa"
+  },
+  "files": [
+    "three_call_rows.csv",
+    "three_call_summary.csv",
+    "metadata.json"
+  ],
+  "limitations": [
+    "scalar dispatch under frozen audited AC bounds",
+    "no OpenDSS replay in this grid",
+    "single IEEE-13 feeder and two primary placements"
+  ],
+  "script_sha256": "aea0ec3ff3a15b9836693c4c57401903ef754531e63d1d4a346fc8237337d9a5",
+  "python_runtime": "3.13.13"
+}

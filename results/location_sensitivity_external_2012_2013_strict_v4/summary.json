@@ -1,0 +1,446 @@
+{
+  "status": "network_recovery_v2_parallel",
+  "source": "data/processed/ausgrid_external_2012_2013_strict.npz",
+  "n_days": 219,
+  "n_groups": 10,
+  "workers": 4,
+  "sites": [
+    "611.3",
+    "634.1",
+    "675.1",
+    "652.1",
+    "645.3",
+    "646.3",
+    "684.3"
+  ],
+  "summary": [
+    {
+      "site": 611.3,
+      "method": "energy_only",
+      "mean_service_kw": 231.28139269406392,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 611.3,
+      "method": "fixed_recovery",
+      "mean_service_kw": 128.23038277682647,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 611.3,
+      "method": "myopic_recovery",
+      "mean_service_kw": 128.4987469789002,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 611.3,
+      "method": "network_lp",
+      "mean_service_kw": 128.53017979452054,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 634.1,
+      "method": "energy_only",
+      "mean_service_kw": 247.16877140410958,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 634.1,
+      "method": "fixed_recovery",
+      "mean_service_kw": 138.0355211900685,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 634.1,
+      "method": "myopic_recovery",
+      "mean_service_kw": 136.0333783492287,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 634.1,
+      "method": "network_lp",
+      "mean_service_kw": 138.50977686215754,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 645.3,
+      "method": "energy_only",
+      "mean_service_kw": 285.6222531392694,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 645.3,
+      "method": "fixed_recovery",
+      "mean_service_kw": 121.57158247716895,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 645.3,
+      "method": "myopic_recovery",
+      "mean_service_kw": 121.83084766962865,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 645.3,
+      "method": "network_lp",
+      "mean_service_kw": 121.86615296803653,
+      "replay_success": 0.997716894977169,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 646.3,
+      "method": "energy_only",
+      "mean_service_kw": 263.9376783675799,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 646.3,
+      "method": "fixed_recovery",
+      "mean_service_kw": 111.82354808789954,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 646.3,
+      "method": "myopic_recovery",
+      "mean_service_kw": 112.01597950556616,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 646.3,
+      "method": "network_lp",
+      "mean_service_kw": 112.04184503424658,
+      "replay_success": 0.997716894977169,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 652.1,
+      "method": "energy_only",
+      "mean_service_kw": 285.0704551940639,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 652.1,
+      "method": "fixed_recovery",
+      "mean_service_kw": 140.68510987442923,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 652.1,
+      "method": "myopic_recovery",
+      "mean_service_kw": 140.5437933545675,
+      "replay_success": 0.9972602739726028,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 652.1,
+      "method": "network_lp",
+      "mean_service_kw": 140.87335901826484,
+      "replay_success": 0.9972602739726028,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 675.1,
+      "method": "energy_only",
+      "mean_service_kw": 299.972602739726,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 675.1,
+      "method": "fixed_recovery",
+      "mean_service_kw": 147.79640803367582,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 675.1,
+      "method": "myopic_recovery",
+      "mean_service_kw": 141.78722246053366,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 675.1,
+      "method": "network_lp",
+      "mean_service_kw": 148.08911244292239,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 684.3,
+      "method": "energy_only",
+      "mean_service_kw": 254.87200342465752,
+      "replay_success": 0.0,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 684.3,
+      "method": "fixed_recovery",
+      "mean_service_kw": 142.8866937785388,
+      "replay_success": 0.9990867579908675,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 684.3,
+      "method": "myopic_recovery",
+      "mean_service_kw": 143.15900319278077,
+      "replay_success": 0.9986301369863013,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    },
+    {
+      "site": 684.3,
+      "method": "network_lp",
+      "mean_service_kw": 143.18996147260273,
+      "replay_success": 0.997716894977169,
+      "baseline_success": 0.9990867579908675,
+      "n": 2190
+    }
+  ],
+  "conditional_summary": [
+    {
+      "site": 611.3,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 231.23257541133455,
+      "n_baseline": 2188
+    },
+    {
+      "site": 611.3,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 128.34759519252742,
+      "n_baseline": 2188
+    },
+    {
+      "site": 611.3,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 128.49966436243145,
+      "n_baseline": 2188
+    },
+    {
+      "site": 611.3,
+      "method": "network_lp",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 128.49966436243145,
+      "n_baseline": 2188
+    },
+    {
+      "site": 634.1,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 247.15082981032907,
+      "n_baseline": 2188
+    },
+    {
+      "site": 634.1,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 138.16169625514166,
+      "n_baseline": 2188
+    },
+    {
+      "site": 634.1,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 136.07152202302038,
+      "n_baseline": 2188
+    },
+    {
+      "site": 634.1,
+      "method": "network_lp",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 138.47438442641683,
+      "n_baseline": 2188
+    },
+    {
+      "site": 645.3,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 285.60911077468006,
+      "n_baseline": 2188
+    },
+    {
+      "site": 645.3,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 121.682708238117,
+      "n_baseline": 2188
+    },
+    {
+      "site": 645.3,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 121.8112288619744,
+      "n_baseline": 2188
+    },
+    {
+      "site": 645.3,
+      "method": "network_lp",
+      "conditional_replay_success": 0.9986288848263254,
+      "conditional_mean_service_kw": 121.8112288619744,
+      "n_baseline": 2188
+    },
+    {
+      "site": 646.3,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 263.9047146366545,
+      "n_baseline": 2188
+    },
+    {
+      "site": 646.3,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 111.92576339693784,
+      "n_baseline": 2188
+    },
+    {
+      "site": 646.3,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 111.9983646595064,
+      "n_baseline": 2188
+    },
+    {
+      "site": 646.3,
+      "method": "network_lp",
+      "conditional_replay_success": 0.9986288848263254,
+      "conditional_mean_service_kw": 111.9983646595064,
+      "n_baseline": 2188
+    },
+    {
+      "site": 652.1,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 285.0568084437843,
+      "n_baseline": 2188
+    },
+    {
+      "site": 652.1,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 140.81370686700183,
+      "n_baseline": 2188
+    },
+    {
+      "site": 652.1,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 0.9981718464351006,
+      "conditional_mean_service_kw": 140.52077652349732,
+      "n_baseline": 2188
+    },
+    {
+      "site": 652.1,
+      "method": "network_lp",
+      "conditional_replay_success": 0.9981718464351006,
+      "conditional_mean_service_kw": 140.81370686700183,
+      "n_baseline": 2188
+    },
+    {
+      "site": 675.1,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 299.9725776965265,
+      "n_baseline": 2188
+    },
+    {
+      "site": 675.1,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 147.93150529878886,
+      "n_baseline": 2188
+    },
+    {
+      "site": 675.1,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 141.77091307749726,
+      "n_baseline": 2188
+    },
+    {
+      "site": 675.1,
+      "method": "network_lp",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 147.99031649908594,
+      "n_baseline": 2188
+    },
+    {
+      "site": 684.3,
+      "method": "energy_only",
+      "conditional_replay_success": 0.0,
+      "conditional_mean_service_kw": 254.8363231261426,
+      "n_baseline": 2188
+    },
+    {
+      "site": 684.3,
+      "method": "fixed_recovery",
+      "conditional_replay_success": 1.0,
+      "conditional_mean_service_kw": 143.01730318784277,
+      "n_baseline": 2188
+    },
+    {
+      "site": 684.3,
+      "method": "myopic_recovery",
+      "conditional_replay_success": 0.9995429616087751,
+      "conditional_mean_service_kw": 143.17341750457038,
+      "n_baseline": 2188
+    },
+    {
+      "site": 684.3,
+      "method": "network_lp",
+      "conditional_replay_success": 0.9986288848263254,
+      "conditional_mean_service_kw": 143.17341750457038,
+      "n_baseline": 2188
+    }
+  ],
+  "estimator_note": {
+    "summary": "pooled unit mean over all date-group units before the article date-cluster aggregation",
+    "conditional_summary": "pooled unit mean over baseline-AC-feasible date-group units",
+    "article_primary": "date-cluster mean with equal weight per retained date; see statistics/statistics.csv and statistics/statistics.json",
+    "reason_for_difference": "The article first averages groups within each date and then gives each retained date equal weight; these legacy summary fields are retained as pooled diagnostics."
+  }
+}

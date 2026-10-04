@@ -1,0 +1,41 @@
+scope,site,outcome,successes,failures,trials,rate,wilson_95_low,wilson_95_high,denominator_note
+baseline-gated,611.3,planner_feasible,1157,2,1159,0.998274374460742,0.9937299961812227,0.9995266436115771,rows.csv; zero-power-gate pass units only
+baseline-gated,611.3,replay_given_planner,1157,0,1157,1.0,0.9966907980486872,1.0,conditional replay denominator is planner-feasible units
+baseline-gated,611.3,joint_planner_and_replay,1157,2,1159,0.998274374460742,0.9937299961812227,0.9995266436115771,rows.csv; zero-power-gate pass units only
+unconditional-physical,611.3,planner_feasible,1157,3,1160,0.9974137931034482,0.9924239117604302,0.9991200749689423,one gate failure/site counted as failure
+unconditional-physical,611.3,joint_planner_and_replay,1157,3,1160,0.9974137931034482,0.9924239117604302,0.9991200749689423,one gate failure/site counted as failure
+baseline-gated,634.1,planner_feasible,1143,16,1159,0.9861949956859362,0.9776928236817701,0.991484867267568,rows.csv; zero-power-gate pass units only
+baseline-gated,634.1,replay_given_planner,1143,0,1143,1.0,0.9966504011595079,1.0,conditional replay denominator is planner-feasible units
+baseline-gated,634.1,joint_planner_and_replay,1143,16,1159,0.9861949956859362,0.9776928236817701,0.991484867267568,rows.csv; zero-power-gate pass units only
+unconditional-physical,634.1,planner_feasible,1143,17,1160,0.9853448275862069,0.9766555998910277,0.9908301271949979,one gate failure/site counted as failure
+unconditional-physical,634.1,joint_planner_and_replay,1143,17,1160,0.9853448275862069,0.9766555998910277,0.9908301271949979,one gate failure/site counted as failure
+baseline-gated,645.3,planner_feasible,1154,5,1159,0.9956859361518551,0.9899409405000965,0.9981559245405329,rows.csv; zero-power-gate pass units only
+baseline-gated,645.3,replay_given_planner,1154,0,1154,1.0,0.9966822238127431,1.0,conditional replay denominator is planner-feasible units
+baseline-gated,645.3,joint_planner_and_replay,1154,5,1159,0.9956859361518551,0.9899409405000965,0.9981559245405329,rows.csv; zero-power-gate pass units only
+unconditional-physical,645.3,planner_feasible,1154,6,1160,0.9948275862068966,0.9887613005875263,0.9976273447897005,one gate failure/site counted as failure
+unconditional-physical,645.3,joint_planner_and_replay,1154,6,1160,0.9948275862068966,0.9887613005875263,0.9976273447897005,one gate failure/site counted as failure
+baseline-gated,646.3,planner_feasible,1152,7,1159,0.993960310612597,0.9875856758906489,0.9970713393152002,rows.csv; zero-power-gate pass units only
+baseline-gated,646.3,replay_given_planner,1152,0,1152,1.0,0.9966764829281919,0.9999999999999999,conditional replay denominator is planner-feasible units
+baseline-gated,646.3,joint_planner_and_replay,1152,7,1159,0.993960310612597,0.9875856758906489,0.9970713393152002,rows.csv; zero-power-gate pass units only
+unconditional-physical,646.3,planner_feasible,1152,8,1160,0.993103448275862,0.9864504144425144,0.9965013366999487,one gate failure/site counted as failure
+unconditional-physical,646.3,joint_planner_and_replay,1152,8,1160,0.993103448275862,0.9864504144425144,0.9965013366999487,one gate failure/site counted as failure
+baseline-gated,652.1,planner_feasible,1142,17,1159,0.9853321829163072,0.9766355676291348,0.990822198402813,rows.csv; zero-power-gate pass units only
+baseline-gated,652.1,replay_given_planner,1141,1,1142,0.999124343257443,0.9950566273699905,0.9998454083560461,conditional replay denominator is planner-feasible units
+baseline-gated,652.1,joint_planner_and_replay,1141,18,1159,0.9844693701466781,0.9755839890225695,0.9901538520919881,rows.csv; zero-power-gate pass units only
+unconditional-physical,652.1,planner_feasible,1142,18,1160,0.9844827586206897,0.9756049208851707,0.9901623590834729,one gate failure/site counted as failure
+unconditional-physical,652.1,joint_planner_and_replay,1141,19,1160,0.9836206896551725,0.9745594778662867,0.9894893549849753,one gate failure/site counted as failure
+baseline-gated,675.1,planner_feasible,1138,21,1159,0.9818809318377912,0.9724592102965228,0.9881188560658647,rows.csv; zero-power-gate pass units only
+baseline-gated,675.1,replay_given_planner,1138,0,1138,1.0,0.9966357336292013,1.0,conditional replay denominator is planner-feasible units
+baseline-gated,675.1,joint_planner_and_replay,1138,21,1159,0.9818809318377912,0.9724592102965228,0.9881188560658647,rows.csv; zero-power-gate pass units only
+unconditional-physical,675.1,planner_feasible,1138,22,1160,0.9810344827586207,0.9714509570130323,0.9874425344860838,one gate failure/site counted as failure
+unconditional-physical,675.1,joint_planner_and_replay,1138,22,1160,0.9810344827586207,0.9714509570130323,0.9874425344860838,one gate failure/site counted as failure
+baseline-gated,684.3,planner_feasible,1159,0,1159,1.0,0.9966964896275802,1.0,rows.csv; zero-power-gate pass units only
+baseline-gated,684.3,replay_given_planner,1159,0,1159,1.0,0.9966964896275802,1.0,conditional replay denominator is planner-feasible units
+baseline-gated,684.3,joint_planner_and_replay,1159,0,1159,1.0,0.9966964896275802,1.0,rows.csv; zero-power-gate pass units only
+unconditional-physical,684.3,planner_feasible,1159,1,1160,0.9991379310344828,0.9951330735166485,0.9998478074474882,one gate failure/site counted as failure
+unconditional-physical,684.3,joint_planner_and_replay,1159,1,1160,0.9991379310344828,0.9951330735166485,0.9998478074474882,one gate failure/site counted as failure
+pooled-baseline-gated,ALL,planner_feasible,8045,68,8113,0.9916183902378898,0.9893888112073165,0.9933826326443155,"8,113 baseline-gated evaluation units"
+pooled-baseline-gated,ALL,replay_given_planner,8044,1,8045,0.9998756991920448,0.9992961909745038,0.9999780575182043,"conditional replay denominator is 8,045 planner-feasible units"
+pooled-baseline-gated,ALL,joint_planner_and_replay,8044,69,8113,0.9914951312707999,0.9892513089732724,0.9932737336137609,"8,113 baseline-gated evaluation units"
+pooled-unconditional-physical,ALL,planner_feasible,8045,75,8120,0.9907635467980296,0.9884383793506389,0.9926245870304128,seven zero-power gate failures counted as failures
+pooled-unconditional-physical,ALL,joint_planner_and_replay,8044,76,8120,0.99064039408867,0.9883016832276929,0.9925150942032005,seven zero-power gate failures counted as failures

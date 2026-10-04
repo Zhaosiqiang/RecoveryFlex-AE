@@ -1,0 +1,4 @@
+relative_command_tolerance,n,replay_success,mean_endpoint_kw,min_endpoint_kw,max_endpoint_kw
+0.005,40,1.0,166.9921875,141.09375,195.9375
+0.01,40,1.0,166.9921875,141.09375,195.9375
+0.02,40,1.0,166.9921875,141.09375,195.9375

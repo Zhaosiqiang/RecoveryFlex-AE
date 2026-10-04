@@ -1,0 +1,22 @@
+Placement binding audit
+
+The network-LP 2-MWh endpoint is compared with the minimum audited export limit over service intervals 8,9,10,11,24,25,26,27.
+Equality tolerance: 1.0e-09 kW.
+The primary population is baseline_feasible; all rows are retained as a diagnostic.
+
+site=611.3 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=611.3 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=634.1 population=all: n=2190, exact=2189/2190, tol=2189/2190, below=1, max|delta|=31.401171875 kW
+site=634.1 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=645.3 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=645.3 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=646.3 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=646.3 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=652.1 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=652.1 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=675.1 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=675.1 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+site=684.3 population=all: n=2190, exact=2190/2190, tol=2190/2190, below=0, max|delta|=0 kW
+site=684.3 population=baseline_feasible: n=2188, exact=2188/2188, tol=2188/2188, below=0, max|delta|=0 kW
+
+This is a post-processing decomposition of the frozen scalar-bound endpoints; it is not a causal attribution or a new AC solve.

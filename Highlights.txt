@@ -1,0 +1,5 @@
+A three-call grid isolates a 4.288-kW intermediate chronology contraction.
+The contraction affects 52.148% of 2,188 units at the primary cell.
+Greedy and LP dispatch match across all 70,016 scalar rows.
+Nonlinear replay succeeds for 4,375/4,376 primary-cell units.
+A 79.5-kW common offer reaches 99.15% joint planning/replay success.
