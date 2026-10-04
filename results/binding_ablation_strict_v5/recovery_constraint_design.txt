@@ -1,0 +1,69 @@
+Predefined recovery-constraint experiment (for a future run)
+
+Purpose
+-------
+The binding audit shows whether the current 2-MWh network endpoint is capped
+by the tightest service-window export bound.  The following experiment is a
+predeclared test of when chronological recovery becomes the active constraint;
+all grid points are run before looking at their outcomes, so no window or
+capacity is selected from the results.
+
+Frozen data and network protocol
+--------------------------------
+Use every retained Ausgrid strict-v4 date, group, and the two existing battery
+placements, plus every held-out OPSD date and its two placements.  Keep the
+existing zero-power baseline gate, profile embedding, OpenDSS snapshot bounds,
+voltage/loading limits, efficiencies, initial SOC (0.80), terminal SOC (0.80),
+service windows [8,12) and [24,28), and the current 48 half-hour horizon.  Do
+not reselect dates, groups, sites, or profiles after inspecting results.
+
+Predefined grid
+---------------
+Battery energy: E in {250, 500, 750, 1000, 1500, 2000} kWh.
+Recovery-window delay: delta in {0, 2, 4, 6} half-hour intervals, with
+
+    R_delta = [12+delta, 24) union [28+delta, 48).
+
+The service windows remain fixed.  delta=0 reproduces the current protocol;
+the other three values remove early post-call recovery opportunities while
+leaving the service obligation unchanged.  Every (E, delta) combination is a
+planned cell (24 cells per placement and source), including cells that may be
+infeasible.
+
+Estimands and checks
+--------------------
+For every date x group x placement x (E, delta), compute the full-horizon
+network-LP endpoint and the fixed-recovery comparator using only the audited
+scalar bounds.  Define b = min export_limit_kw over the eight service
+intervals, delta_P = P_frontier - b, and I_recovery = 1[delta_P < -1e-9 kW].
+Report, for every grid cell and site, the unit proportion I_recovery=1,
+the date-cluster mean delta_P (groups averaged within date first), the
+date-cluster bootstrap interval, planner-feasibility rate, and—where the
+frontier schedule is replayed—the AC replay rate.  Also report the exact
+2-MWh equality check as a protocol-control cell.  Keep all rows; do not
+condition on a successful endpoint except for the separately labelled primary
+baseline-feasible population.
+
+Validation and interpretation
+-----------------------------
+Re-run the existing bound table only once; changing E or delta changes the
+chronological dispatch, not the snapshot feeder state.  Replay every selected
+frontier schedule through OpenDSS if computationally feasible; otherwise
+predeclare a fixed, stratified replay sample before opening any endpoint
+results (seed 20261004, all sites x all E x all delta, 20 dates per cell).
+Never call a scalar-bound cell an AC validation.  Do not select the maximum
+cell, a preferred delay, or a capacity threshold after seeing the surface.
+The main test is the complete 6 x 4 surface; a secondary summary may report
+the smallest E at each delta whose date-mean frontier reaches 95% of its
+delta=0, E=2000 reference, but that threshold must be evaluated at the fixed
+predeclared grid and cannot be interpolated or optimized post hoc.
+
+Falsifiable interpretation
+--------------------------
+If the current binding explanation is correct, high-capacity, early-recovery
+cells should remain close to b while reducing E or delaying recovery should
+produce a reproducible negative delta_P and a rising I_recovery.  If the whole
+surface remains equal to b, the repeated-contract recovery constraint is not
+active for this feeder/profile protocol and the manuscript should not present
+recovery as a dominant mechanism.  This design tests that statement without
+choosing time windows or capacity levels after observing the data.

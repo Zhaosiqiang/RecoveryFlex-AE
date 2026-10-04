@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "Network-audited chronological delivery limits for repeated distribution-battery flexibility"
+authors:
+  - family-names: Zhao
+    given-names: Siqiang
+  - family-names: Zhang
+    given-names: Fengxiang
+version: 5.0.0
+date-released: 2026-10-04
+license: MIT
+repository-code: "https://github.com/Zhaosiqiang/RecoveryFlex-AE"
+abstract: "Code and data-processing protocol for an auditable repeated-flexibility delivery calculation with a predeclared three-call chronology stress, cumulative-window certificates, service-window export audits, placement sensitivity, and selected nonlinear OpenDSS replay under frozen scalar bounds."

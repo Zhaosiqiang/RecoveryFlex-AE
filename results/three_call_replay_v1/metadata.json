@@ -1,0 +1,104 @@
+{
+  "status": "three_call_primary_replay_v1",
+  "protocol": {
+    "service_windows": [
+      [
+        8,
+        12
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        32,
+        36
+      ]
+    ],
+    "recovery_windows": [
+      [
+        12,
+        24
+      ],
+      [
+        28,
+        32
+      ],
+      [
+        36,
+        48
+      ]
+    ],
+    "capacity_kwh": 500.0,
+    "terminal_mode": "exact",
+    "terminal_visibility": "always",
+    "initial_soc": 0.8,
+    "terminal_soc": 0.8,
+    "soc_bounds": [
+      0.2,
+      1.0
+    ],
+    "efficiencies": [
+      0.95,
+      0.95
+    ],
+    "dt_h": 0.5,
+    "sites": [
+      "611.3",
+      "634.1"
+    ]
+  },
+  "source_rows": "results/three_call_grid_v1/three_call_rows.csv",
+  "bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+  "source_profile": "data/processed/ausgrid_external_2012_2013_strict.npz",
+  "summary": [
+    {
+      "site": 611.3,
+      "n": 2188,
+      "planner_feasible": 2188,
+      "replay_feasible": 2188,
+      "joint_success": 2188,
+      "mean_service_kw": 124.51331405500171
+    },
+    {
+      "site": 634.1,
+      "n": 2188,
+      "planner_feasible": 2188,
+      "replay_feasible": 2187,
+      "joint_success": 2187,
+      "mean_service_kw": 122.61023626519297
+    }
+  ],
+  "failure_classes": [
+    {
+      "site": 634.1,
+      "failure_class": "replay_loading",
+      "size": 1
+    }
+  ],
+  "files": [
+    "three_call_replay_rows.csv",
+    "three_call_replay_summary.csv",
+    "three_call_replay_failures.csv",
+    "metadata.json"
+  ],
+  "protocol_sha256": "340b2e0f3e8e205be4ded36c96aab1265d074519c72f4d79f2ecf1890d85dfa5",
+  "grid_protocol_sha256": "afe875c2de5bf747591567dd58af2fd2a0dab7837f72547c6b056949b10905f5",
+  "source_hashes": {
+    "source_rows": "c35536e3757581b2aa9f40307105a7f8c49e761a876e38a4de4ee06b499a21be",
+    "bounds": "408410e32f52af9787f5a9f8e19af3abff0d56cb4007d59e5d022d7255b8cfc8",
+    "profile": "e2fa37d914c284569e46644428dbe9a21a095fe5c13280dbe1dfcda45035eed8",
+    "grid_metadata": "409244712552a1ed4a0a11fe28f7393e09938c54ba5ad772ed1c5e06a82e09ee"
+  },
+  "ac_audit": {
+    "constraint_tolerance": 1e-06,
+    "voltage_limits": [
+      0.95,
+      1.05
+    ],
+    "line_loading_limit": 1.0,
+    "transformer_loading_limit": 1.0,
+    "failure_edge_note": "A readback just above 1.0+1e-6 is retained as a replay_loading failure rather than silently rounded."
+  },
+  "script_sha256": "fcf408c56aa3a9b156fc038c50c62239bb74e828ba5fd73a7571517333874b67"
+}

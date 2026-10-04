@@ -1,0 +1,63 @@
+{
+  "status": "blocking_before_submission",
+  "auditor": "data_validity_audit",
+  "scope": "existing scalar pilot and corrective profile-bank v2",
+  "official_opsd_metadata": {
+    "url": "https://data.open-power-system-data.org/household_data/2020-04-15/",
+    "relevant_facts": [
+      "The household release documents that meters provide cumulative energy in kWh.",
+      "The 15-minute file is a regular interpolated time series and its interpolation marker identifies columns by name.",
+      "The selected grid_import and pv fields are documented as energy in kWh, not instantaneous kW."
+    ]
+  },
+  "fatal_or_major_blockers": [
+    {
+      "id": "OPSD_UNIT_ERROR",
+      "severity": "fatal_for_any_OPSD_quantitative_result",
+      "evidence": "scripts/process_opsd.py:6,11-12 treats cumulative kWh as kW, sums it and multiplies by 0.25, and reports the cumulative series peak as kW.",
+      "repair": "Use scripts/build_profile_bank_v2.py:build_opsd, which first-differences each selected cumulative channel and divides by actual elapsed hours. Rebuild OPSD results or label the old OPSD output as invalid."
+    },
+    {
+      "id": "OPSD_INTERPOLATION_FLAG",
+      "severity": "major",
+      "evidence": "scripts/process_opsd.py:12 uses g.interpolated.notna().mean(), which is one for every non-null marker cell and does not test whether either selected column is named in the marker.",
+      "repair": "Use selected-column token matching in build_profile_bank_v2.py; publish fractions separately for load and PV."
+    },
+    {
+      "id": "DAILY_SCALAR_COLLAPSE",
+      "severity": "fatal_for_profile_based_claims",
+      "evidence": "scripts/build_opsd_scenarios.py:8-9 and scripts/build_ausgrid_scenarios.py:12-18 rank daily totals and replace each waveform with load_scale and pv_fraction. OpenDSS then applies these constants through opendss_adapter.py:solve rather than the measured trajectories.",
+      "repair": "Use the interval-resolved NPZ banks. If the main experiment is still scalar, remove claims that measured profiles validate it and call the data a synthetic scaling check."
+    },
+    {
+      "id": "TEST_CONTAMINATION",
+      "severity": "fatal_for_held_out_claim",
+      "evidence": "scripts/run_pilot.py:45-68 searches for the largest accepted offer by calling audit_sequence with the hidden forecast error on every candidate; run_opsd_pilot.py and run_ausgrid_pilot.py report those same audits as pilot/held-out outcomes.",
+      "repair": "Fit/select offer on train only, freeze it, calibrate one margin on calibration dates, and evaluate once on disjoint test dates. Keep test trajectories inaccessible to offer selection."
+    },
+    {
+      "id": "TELEMETRY_PREDETERMINATION",
+      "severity": "major_claim_overreach",
+      "evidence": "src/recoveryflex/envelope.py:22-30 defines robust_margin and derate=1-3*margin; the reported telemetry uplift is therefore imposed by the candidate formula, not estimated from telemetry or an observation model.",
+      "repair": "Remove telemetry as a causal/operational result, or add a declared observation-error experiment in which telemetry changes a held-out estimate and report the result as an ablation."
+    },
+    {
+      "id": "WILSON_CLUSTER_UNIT",
+      "severity": "major_statistics",
+      "evidence": "scripts/build_metrics_report.py:11-12 treats every row as an independent Bernoulli trial. Rows repeat the same scenario, site, duration, recovery, telemetry, and hidden error; event audits are also repeated within each row.",
+      "repair": "Report descriptive rates by independent day/scenario cluster and bootstrap dates (or use a cluster-robust interval). Do not call row-level Wilson intervals confidence intervals for generalization."
+    }
+  ],
+  "corrective_bank_v2": {
+    "script": "scripts/build_profile_bank_v2.py",
+    "tests": "tests/test_profile_bank_v2.py",
+    "validation": "3 tests passed",
+    "ausgrid": "365 complete dates, 300 customers, 10 fixed seeded customer groups, 48 half-hour average-kW points, GC+CL load and GG PV; 214/71/80 train/cal/test by within-month chronological split",
+    "opsd": "660 complete dates, 96 15-minute average-kW points, cumulative-to-increment conversion, selected-column flags; 387/128/145 train/cal/test by within-month chronological split",
+    "known_limits": [
+      "Ausgrid profiles are household-level and are mapped to feeder groups synthetically; the mapping is recorded but is not a measured feeder topology.",
+      "OPSD contains one selected household pair and remains an external profile check rather than independent feeder evidence.",
+      "A fresh train/calibration/test experiment must be rerun before any manuscript results are trusted."
+    ]
+  }
+}

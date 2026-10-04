@@ -1,0 +1,39 @@
+{
+  "status": "calendar_horizon_and_capacity_sensitivity",
+  "bounds": "results/network_recovery_external_2012_2013_strict_v4/ac_bounds.csv",
+  "capacities_kwh": [
+    250.0,
+    500.0,
+    1000.0,
+    2000.0
+  ],
+  "lookahead_intervals": [
+    4,
+    8,
+    12,
+    24
+  ],
+  "windows": [
+    [
+      8,
+      12
+    ],
+    [
+      24,
+      28
+    ]
+  ],
+  "recovery_windows": [
+    [
+      12,
+      24
+    ],
+    [
+      28,
+      48
+    ]
+  ],
+  "n_rows": 122640,
+  "n_baseline_units_per_site": 2188,
+  "summary_csv": "results/causal_capacity_sensitivity_strict_v4/date_cluster_summary.csv"
+}

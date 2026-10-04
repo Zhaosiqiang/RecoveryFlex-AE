@@ -1,0 +1,13 @@
+{
+  "source": "data/raw/ausgrid/Solar home 2011-2012.csv",
+  "source_sha256": "a7d6abd1369311a5566e00d249141fd8aec28e9faba0bc928788607d961fc8c8",
+  "n_days": 366,
+  "n_groups": 10,
+  "intervals_per_day": 48,
+  "units": "average kW; source values are kWh per 30-minute interval",
+  "groups_frozen_from": "ausgrid_profile_bank_v2_manifest.json",
+  "date_range": [
+    "2011-07-01",
+    "2012-06-30"
+  ]
+}
